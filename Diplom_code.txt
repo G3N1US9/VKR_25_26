@@ -1,0 +1,3437 @@
+
+
+#include "flprogUtilites.h"
+#include <SPI.h>
+#include <Wire.h>
+#include <SD.h>
+#include <OneWire.h>
+#include <LCDI2C_Multilingual.h>
+#include <EEPROM.h>
+File _sd1DF;
+String _sd1TS;
+
+
+
+struct UB_142589483
+{
+bool ubo_166541688 = 0;
+bool ubo_723833 = 0;
+bool _tim1I = 0;
+bool _tim1O = 0;
+unsigned long _tim1P = 0UL;
+byte _swi1 = 0;
+byte _swi3 = 0;
+bool _tim2I = 0;
+bool _tim2O = 0;
+unsigned long _tim2P = 0UL;
+bool _swi2 = 0;
+bool _trgrt1 = 0;
+bool _trgrt1I = 0;
+bool _tim3I = 0;
+bool _tim3O = 0;
+unsigned long _tim3P = 0UL;
+bool _tim4I = 0;
+bool _tim4O = 0;
+unsigned long _tim4P = 0UL;
+bool _trgrt2 = 0;
+bool _trgrt2I = 0;
+};
+UB_142589483 UB_142589483_Instance3;
+UB_142589483 UB_142589483_Instance1;
+bool UB_142589483_ubi_130480819 = 0;
+bool UB_142589483_ubi_49975783 = 0;
+OneWire  _ow38(38);
+byte _FLPArray67347937[9];
+int _FLPArray191651832[4];
+LCDI2C_Russian lcd(0x27, 20, 4); // I2C address: 0x27; Display size: 20x4
+bool En_83392563_4;
+String Text1_83392563_4;
+int Stroka_83392563_4;
+int Stolb_83392563_4;
+bool En_83392563_6;
+String Text1_83392563_6;
+int Stroka_83392563_6;
+int Stolb_83392563_6;
+bool En_83392563_7;
+String Text1_83392563_7;
+int Stroka_83392563_7;
+int Stolb_83392563_7;
+bool En_233382538_3;
+String Text1_233382538_3;
+int Stroka_233382538_3;
+int Stolb_233382538_3;
+bool cle_ar_233382538_3;
+bool En_83392563_10;
+String Text1_83392563_10;
+int Stroka_83392563_10;
+int Stolb_83392563_10;
+bool En_233382538_4;
+String Text1_233382538_4;
+int Stroka_233382538_4;
+int Stolb_233382538_4;
+bool cle_ar_233382538_4;
+bool En_83392563_1;
+String Text1_83392563_1;
+int Stroka_83392563_1;
+int Stolb_83392563_1;
+bool En_83392563_2;
+String Text1_83392563_2;
+int Stroka_83392563_2;
+int Stolb_83392563_2;
+bool En_83392563_3;
+String Text1_83392563_3;
+int Stroka_83392563_3;
+int Stolb_83392563_3;
+bool En_83392563_5;
+String Text1_83392563_5;
+int Stroka_83392563_5;
+int Stolb_83392563_5;
+bool En_83392563_8;
+String Text1_83392563_8;
+int Stroka_83392563_8;
+int Stolb_83392563_8;
+bool En_83392563_20;
+String Text1_83392563_20;
+int Stroka_83392563_20;
+int Stolb_83392563_20;
+bool En_83392563_21;
+String Text1_83392563_21;
+int Stroka_83392563_21;
+int Stolb_83392563_21;
+bool En_83392563_22;
+String Text1_83392563_22;
+int Stroka_83392563_22;
+int Stolb_83392563_22;
+bool En_83392563_23;
+String Text1_83392563_23;
+int Stroka_83392563_23;
+int Stolb_83392563_23;
+bool En_83392563_24;
+String Text1_83392563_24;
+int Stroka_83392563_24;
+int Stolb_83392563_24;
+bool En_83392563_25;
+String Text1_83392563_25;
+int Stroka_83392563_25;
+int Stolb_83392563_25;
+bool En_83392563_26;
+String Text1_83392563_26;
+int Stroka_83392563_26;
+int Stolb_83392563_26;
+bool En_83392563_27;
+String Text1_83392563_27;
+int Stroka_83392563_27;
+int Stolb_83392563_27;
+bool En_83392563_33;
+String Text1_83392563_33;
+int Stroka_83392563_33;
+int Stolb_83392563_33;
+bool En_83392563_34;
+String Text1_83392563_34;
+int Stroka_83392563_34;
+int Stolb_83392563_34;
+bool En_83392563_35;
+String Text1_83392563_35;
+int Stroka_83392563_35;
+int Stolb_83392563_35;
+bool En_83392563_36;
+String Text1_83392563_36;
+int Stroka_83392563_36;
+int Stolb_83392563_36;
+bool En_83392563_37;
+String Text1_83392563_37;
+int Stroka_83392563_37;
+int Stolb_83392563_37;
+bool En_83392563_38;
+String Text1_83392563_38;
+int Stroka_83392563_38;
+int Stolb_83392563_38;
+bool En_83392563_39;
+String Text1_83392563_39;
+int Stroka_83392563_39;
+int Stolb_83392563_39;
+bool En_233382538_5;
+String Text1_233382538_5;
+int Stroka_233382538_5;
+int Stolb_233382538_5;
+bool cle_ar_233382538_5;
+bool En_83392563_40;
+String Text1_83392563_40;
+int Stroka_83392563_40;
+int Stolb_83392563_40;
+bool En_83392563_41;
+String Text1_83392563_41;
+int Stroka_83392563_41;
+int Stolb_83392563_41;
+bool En_83392563_42;
+String Text1_83392563_42;
+int Stroka_83392563_42;
+int Stolb_83392563_42;
+bool En_83392563_43;
+String Text1_83392563_43;
+int Stroka_83392563_43;
+int Stolb_83392563_43;
+bool En_83392563_44;
+String Text1_83392563_44;
+int Stroka_83392563_44;
+int Stolb_83392563_44;
+bool En_83392563_45;
+String Text1_83392563_45;
+int Stroka_83392563_45;
+int Stolb_83392563_45;
+bool En_83392563_46;
+String Text1_83392563_46;
+int Stroka_83392563_46;
+int Stolb_83392563_46;
+bool En_83392563_47;
+String Text1_83392563_47;
+int Stroka_83392563_47;
+int Stolb_83392563_47;
+bool En_83392563_53;
+String Text1_83392563_53;
+int Stroka_83392563_53;
+int Stolb_83392563_53;
+bool En_83392563_54;
+String Text1_83392563_54;
+int Stroka_83392563_54;
+int Stolb_83392563_54;
+bool En_83392563_55;
+String Text1_83392563_55;
+int Stroka_83392563_55;
+int Stolb_83392563_55;
+bool En_233382538_1;
+String Text1_233382538_1;
+int Stroka_233382538_1;
+int Stolb_233382538_1;
+bool cle_ar_233382538_1;
+bool En_233382538_2;
+String Text1_233382538_2;
+int Stroka_233382538_2;
+int Stolb_233382538_2;
+bool cle_ar_233382538_2;
+const int _menuParametrsArray[]  PROGMEM =  {1, 0, 0, 7, 10, 0, 0, 0, 0, 0, 11, 0, 0, 0, 2, 0, 0, 36, 38, 0, 0, 0, 0, 0, 43, 0, 0, 0, 3, 0, 0, 49, 49, 0, 0, 0, 0, 0, 36, 0, 0, 0, 4, 0, 0, 51, 53, 0, 0, 0, 0, 0, 52, 0, 0, 0, 5, 0, 0, 57, 62, 0, 0, 0, 0, 0, 42, 0, 0, 0, 6, 0, 0, 69, 72, 0, 0, 0, 0, 0, 56, 0, 0, 0, 7, 0, 0, 11, 14, 1, 0, 0, 0, 0, 68, 0, 85, 86, 8, 0, 0, 19, 22, 1, 0, 0, 0, 0, 13, 0, 80, 81, 9, 0, 0, 27, 30, 1, 0, 0, 0, 0, 74, 0, 87, 88, 10, 0, 0, 35, 35, 1, 0, 0, 0, 0, 63, 0, 0, 0, 11, 0, 0, 15, 15, 7, 0, 0, 0, 0, 34, 0, 0, 0, 12, 0, 0, 16, 16, 7, 0, 0, 0, 0, 49, 0, 0, 0, 13, 0, 0, 17, 17, 7, 0, 0, 0, 0, 57, 0, 0, 0, 14, 0, 0, 18, 18, 7, 0, 0, 0, 0, 70, 0, 0, 0, 15, 3, 7, 0, 0, 11, 93, 94, 1, 8, 38, 0, 0, 0, 16, 3, 10, 0, 0, 12, 93, 94, 1, 8, 51, 0, 0, 0, 17, 3, 12, 0, 0, 13, 93, 94, 1, 8, 60, 0, 0, 0, 18, 3, 6, 0, 0, 14, 93, 94, 1, 8, 35, 0, 0, 0, 19, 0, 0, 23, 23, 8, 0, 0, 0, 0, 16, 0, 0, 0, 20, 0, 0, 24, 24, 8, 0, 0, 0, 0, 66, 0, 0, 0, 21, 0, 0, 25, 25, 8, 0, 0, 0, 0, 44, 0, 0, 0, 22, 0, 0, 26, 26, 8, 0, 0, 0, 0, 19, 0, 0, 0, 23, 3, 11, 0, 0, 19, 91, 92, 1, 8, 55, 0, 0, 0, 24, 3, 4, 0, 0, 20, 91, 92, 1, 8, 31, 0, 0, 0, 25, 3, 9, 0, 0, 21, 91, 92, 1, 8, 47, 0, 0, 0, 26, 3, 3, 0, 0, 22, 91, 92, 1, 8, 23, 0, 0, 0, 27, 0, 0, 31, 31, 9, 0, 0, 0, 0, 1, 0, 0, 0, 28, 0, 0, 32, 32, 9, 0, 0, 0, 0, 53, 0, 0, 0, 29, 0, 0, 33, 33, 9, 0, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 34, 34, 9, 0, 0, 0, 0, 3, 0, 0, 0, 31, 3, 8, 0, 0, 27, 89, 90, 1, 8, 45, 0, 0, 0, 32, 3, 2, 0, 0, 28, 89, 90, 1, 8, 20, 0, 0, 0, 33, 3, 5, 0, 0, 29, 89, 90, 1, 8, 33, 0, 0, 0, 34, 3, 1, 0, 0, 30, 89, 90, 1, 8, 8, 0, 0, 0, 35, 4, 19, 0, 0, 10, 15, 17, 1, 4, 65, 0, 83, 84, 36, 0, 0, 39, 39, 2, 0, 0, 0, 0, 5, 0, 0, 0, 37, 0, 0, 40, 43, 2, 0, 0, 0, 0, 22, 0, 0, 0, 38, 0, 0, 48, 48, 2, 0, 0, 0, 0, 24, 0, 0, 0, 39, 4, 3, 0, 0, 36, 5, 17, 1, 4, 10, 0, 76, 77, 40, 0, 0, 44, 44, 37, 0, 0, 0, 0, 59, 0, 0, 0, 41, 0, 0, 45, 45, 37, 0, 0, 0, 0, 69, 0, 0, 0, 42, 0, 0, 46, 46, 37, 0, 0, 0, 0, 2, 0, 0, 0, 43, 0, 0, 47, 47, 37, 0, 0, 0, 0, 50, 0, 0, 0, 44, 4, 18, 0, 0, 40, 11, 1, 1, 4, 64, 0, 0, 0, 45, 4, 20, 0, 0, 41, 6, 1, 1, 4, 12, 0, 78, 79, 46, 4, 1, 0, 0, 42, 3, 17, 1, 4, 6, 0, 0, 0, 47, 4, 5, 0, 0, 43, 7, 17, 1, 4, 15, 0, 0, 0, 48, 4, 17, 0, 0, 38, 14, 2, 2, 4, 61, 0, 0, 0, 49, 0, 0, 50, 50, 3, 0, 0, 0, 0, 72, 0, 0, 0, 50, 4, 21, 0, 0, 49, 16, 2, 2, 4, 75, 0, 0, 0, 51, 0, 0, 54, 54, 4, 0, 0, 0, 0, 17, 0, 0, 0, 52, 0, 0, 55, 55, 4, 0, 0, 0, 0, 26, 0, 0, 0, 53, 0, 0, 56, 56, 4, 0, 0, 0, 0, 71, 0, 0, 0, 54, 4, 7, 0, 0, 51, 9, 19, 1, 4, 21, 0, 0, 0, 55, 4, 11, 0, 0, 52, 12, 20, 1, 4, 29, 0, 0, 0, 56, 4, 13, 0, 0, 53, 13, 17, 1, 4, 37, 0, 0, 0, 57, 0, 0, 63, 63, 5, 0, 0, 0, 0, 4, 0, 0, 0, 58, 0, 0, 64, 64, 5, 0, 0, 0, 0, 14, 0, 0, 0, 59, 0, 0, 65, 65, 5, 0, 0, 0, 0, 58, 0, 0, 0, 60, 0, 0, 66, 66, 5, 0, 0, 0, 0, 67, 0, 0, 0, 61, 0, 0, 67, 67, 5, 0, 0, 0, 0, 73, 0, 0, 0, 62, 0, 0, 68, 68, 5, 0, 0, 0, 0, 7, 0, 0, 0, 63, 4, 2, 0, 0, 57, 4, 18, 1, 4, 9, 0, 0, 0, 64, 4, 6, 0, 0, 58, 8, 1, 1, 4, 18, 0, 0, 0, 65, 4, 9, 0, 0, 59, 11, 1, 1, 4, 27, 0, 0, 0, 66, 4, 12, 0, 0, 60, 3, 17, 1, 4, 32, 0, 0, 0, 67, 4, 15, 0, 0, 61, 7, 17, 1, 4, 41, 0, 0, 0, 68, 4, 4, 0, 0, 62, 6, 1, 1, 4, 12, 0, 78, 79, 69, 0, 0, 73, 73, 6, 0, 0, 0, 0, 62, 0, 0, 0, 70, 0, 0, 74, 74, 6, 0, 0, 0, 0, 39, 0, 0, 0, 71, 0, 0, 75, 75, 6, 0, 0, 0, 0, 46, 0, 0, 0, 72, 0, 0, 76, 76, 6, 0, 0, 0, 0, 54, 0, 0, 0, 73, 4, 10, 0, 0, 69, 10, 17, 1, 4, 28, 0, 82, 0, 74, 4, 14, 0, 0, 70, 10, 17, 1, 4, 40, 0, 82, 0, 75, 4, 16, 0, 0, 71, 10, 17, 1, 4, 48, 0, 82, 0, 76, 4, 8, 0, 0, 72, 10, 17, 1, 4, 25, 0, 82, 0};
+bool _menuValueArray_bool[12];
+const bool _menuConstantValuesArray_bool[]  PROGMEM =  {1};
+int _menuValueArray_int[21];
+const int _menuConstantValuesArray_int[]  PROGMEM =  {1, 5, 23, 2099, 2, 7, 59, 12, 35, 9, 31, 50, 10, 120, 180, 600, 0, 2025, 25, 30};
+ const char _flprogMenuNameString1[] PROGMEM = "Пожар-мигание цепи A";
+ const char _flprogMenuNameString2[] PROGMEM = " Час начала Ф-теста ";
+ const char _flprogMenuNameString3[] PROGMEM = "Пожар-мигание цепи D";
+ const char _flprogMenuNameString4[] PROGMEM = "    Текущий год    ";
+ const char _flprogMenuNameString5[] PROGMEM = "Периодичность теста";
+ const char _flprogMenuNameString6[] PROGMEM = " Выбор часа Ф-теста ";
+ const char _flprogMenuNameString7[] PROGMEM = "Текущий день недели";
+ const char _flprogMenuNameString8[] PROGMEM = " вкл-откл мигание D ";
+ const char _flprogMenuNameString9[] PROGMEM = "     Выбор года     ";
+ const char _flprogMenuNameString10[] PROGMEM = "Выбор периодичности:";
+ const char _flprogMenuNameString11[] PROGMEM = " Настройка цепей АО ";
+ const char _flprogMenuNameString12[] PROGMEM = "  Выбор дня недели  ";
+ const char _flprogMenuNameString13[] PROGMEM = "  Индикаторы цепей  ";
+ const char _flprogMenuNameString14[] PROGMEM = "   Текущий месяц   ";
+ const char _flprogMenuNameString15[] PROGMEM = "Выбор минут Ф-теста";
+ const char _flprogMenuNameString16[] PROGMEM = "  Индикатор цепи A  ";
+ const char _flprogMenuNameString17[] PROGMEM = "Темп вкл вентилятора";
+ const char _flprogMenuNameString18[] PROGMEM = "    Выбор месяца    ";
+ const char _flprogMenuNameString19[] PROGMEM = "  Индикатор цепи D  ";
+ const char _flprogMenuNameString20[] PROGMEM = " вкл-откл мигание B ";
+ const char _flprogMenuNameString21[] PROGMEM = "Темп. вкл. вент, 'C";
+ const char _flprogMenuNameString22[] PROGMEM = " Время и дата теста ";
+ const char _flprogMenuNameString23[] PROGMEM = "вкл-откл инд. цепи D";
+ const char _flprogMenuNameString24[] PROGMEM = "Длительность Ф-теста";
+ const char _flprogMenuNameString25[] PROGMEM = "   4 цифра пароля   ";
+ const char _flprogMenuNameString26[] PROGMEM = "Темп. перегрева ИБП";
+ const char _flprogMenuNameString27[] PROGMEM = "     Выбор даты     ";
+ const char _flprogMenuNameString28[] PROGMEM = "   1 цифра пароля   ";
+ const char _flprogMenuNameString29[] PROGMEM = "Темп. перегрева, 'C";
+ const char _flprogMenuNameString30[] PROGMEM = "Пожар-мигание цепи C";
+ const char _flprogMenuNameString31[] PROGMEM = "вкл-откл инд. цепи B";
+ const char _flprogMenuNameString32[] PROGMEM = "     Выбор часа     ";
+ const char _flprogMenuNameString33[] PROGMEM = " вкл-откл мигание C ";
+ const char _flprogMenuNameString34[] PROGMEM = " режим работы Гр.A  ";
+ const char _flprogMenuNameString35[] PROGMEM = "  Групповая цепь D  ";
+ const char _flprogMenuNameString36[] PROGMEM = " Тест работы от АКБ ";
+ const char _flprogMenuNameString37[] PROGMEM = "   Гистерезис, 'C   ";
+ const char _flprogMenuNameString38[] PROGMEM = "  Групповая цепь A  ";
+ const char _flprogMenuNameString39[] PROGMEM = "Выбор 2 цифры пароля";
+ const char _flprogMenuNameString40[] PROGMEM = "   2 цифра пароля   ";
+ const char _flprogMenuNameString41[] PROGMEM = "    Выбор минут    ";
+ const char _flprogMenuNameString42[] PROGMEM = "Настройки даты/время";
+ const char _flprogMenuNameString43[] PROGMEM = "Функциональный тест";
+ const char _flprogMenuNameString44[] PROGMEM = "  Индикатор цепи C  ";
+ const char _flprogMenuNameString45[] PROGMEM = " вкл-откл мигание A ";
+ const char _flprogMenuNameString46[] PROGMEM = "Выбор 3 цифры пароля";
+ const char _flprogMenuNameString47[] PROGMEM = "вкл-откл инд. цепи C";
+ const char _flprogMenuNameString48[] PROGMEM = "   3 цифра пароля   ";
+ const char _flprogMenuNameString49[] PROGMEM = " режим работы Гр.B  ";
+ const char _flprogMenuNameString50[] PROGMEM = "Минуты старта теста";
+ const char _flprogMenuNameString51[] PROGMEM = "  Групповая цепь B  ";
+ const char _flprogMenuNameString52[] PROGMEM = "Контроль температуры";
+ const char _flprogMenuNameString53[] PROGMEM = "Пожар-мигание цепи B";
+ const char _flprogMenuNameString54[] PROGMEM = "Выбор 4 цифры пароля";
+ const char _flprogMenuNameString55[] PROGMEM = "вкл-откл инд. цепи A";
+ const char _flprogMenuNameString56[] PROGMEM = "    Смена пароля    ";
+ const char _flprogMenuNameString57[] PROGMEM = " режим работы Гр.C  ";
+ const char _flprogMenuNameString58[] PROGMEM = "    Текущая дата    ";
+ const char _flprogMenuNameString59[] PROGMEM = "Дата месячного теста";
+ const char _flprogMenuNameString60[] PROGMEM = "  Групповая цепь C  ";
+ const char _flprogMenuNameString61[] PROGMEM = " Длительность, сек. ";
+ const char _flprogMenuNameString62[] PROGMEM = "Выбор 1 цифры пароля";
+ const char _flprogMenuNameString63[] PROGMEM = " Задержка откл. АО ";
+ const char _flprogMenuNameString64[] PROGMEM = " Выбор даты Ф-теста ";
+ const char _flprogMenuNameString65[] PROGMEM = "Задержка откл АО мин";
+ const char _flprogMenuNameString66[] PROGMEM = "  Индикатор цепи B  ";
+ const char _flprogMenuNameString67[] PROGMEM = "    Текущий час    ";
+ const char _flprogMenuNameString68[] PROGMEM = " Режим работы цепей ";
+ const char _flprogMenuNameString69[] PROGMEM = " День недели теста ";
+ const char _flprogMenuNameString70[] PROGMEM = " режим работы Гр.D  ";
+ const char _flprogMenuNameString71[] PROGMEM = " Выбор Гистерезиса ";
+ const char _flprogMenuNameString72[] PROGMEM = " Длительность теста ";
+ const char _flprogMenuNameString73[] PROGMEM = "   Текущие минуты   ";
+ const char _flprogMenuNameString74[] PROGMEM = "Мигание при пожаре";
+ const char _flprogMenuNameString75[] PROGMEM = " Длительность, мин. ";
+ const char _flprogMenuNameString76[] PROGMEM = "Периоды теста: 0-вык";
+ const char _flprogMenuNameString77[] PROGMEM = "1-недельн, 2-месячн.";
+ const char _flprogMenuNameString78[] PROGMEM = "    Дни недели:    ";
+ const char _flprogMenuNameString79[] PROGMEM = "   1-Пн ... 7-Вс   ";
+ const char _flprogMenuNameString80[] PROGMEM = "Индикатор целой цепи";
+ const char _flprogMenuNameString81[] PROGMEM = "до светильника АО";
+ const char _flprogMenuNameString82[] PROGMEM = "  Текущий пароль:  ";
+ const char _flprogMenuNameString83[] PROGMEM = "задержка отключения";
+ const char _flprogMenuNameString84[] PROGMEM = "АО после аварии";
+ const char _flprogMenuNameString85[] PROGMEM = "ВКЛ-всегда включена";
+ const char _flprogMenuNameString86[] PROGMEM = "ОТКЛ-вкл при авариях";
+ const char _flprogMenuNameString87[] PROGMEM = "мигание ВКЛ - цепь";
+ const char _flprogMenuNameString88[] PROGMEM = "мигает при пожаре";
+ const char _flprogMenuNameString89[] PROGMEM = "включено";
+ const char _flprogMenuNameString90[] PROGMEM = "отключено";
+ const char _flprogMenuNameString91[] PROGMEM = "включен";
+ const char _flprogMenuNameString92[] PROGMEM = "отключен";
+ const char _flprogMenuNameString93[] PROGMEM = "включена";
+ const char _flprogMenuNameString94[] PROGMEM = "отключена";
+const char* const _flprogMenuStringsArray[] PROGMEM = { _flprogMenuNameString1,  _flprogMenuNameString2,  _flprogMenuNameString3,  _flprogMenuNameString4,  _flprogMenuNameString5,  _flprogMenuNameString6,  _flprogMenuNameString7,  _flprogMenuNameString8,  _flprogMenuNameString9,  _flprogMenuNameString10,  _flprogMenuNameString11,  _flprogMenuNameString12,  _flprogMenuNameString13,  _flprogMenuNameString14,  _flprogMenuNameString15,  _flprogMenuNameString16,  _flprogMenuNameString17,  _flprogMenuNameString18,  _flprogMenuNameString19,  _flprogMenuNameString20,  _flprogMenuNameString21,  _flprogMenuNameString22,  _flprogMenuNameString23,  _flprogMenuNameString24,  _flprogMenuNameString25,  _flprogMenuNameString26,  _flprogMenuNameString27,  _flprogMenuNameString28,  _flprogMenuNameString29,  _flprogMenuNameString30,  _flprogMenuNameString31,  _flprogMenuNameString32,  _flprogMenuNameString33,  _flprogMenuNameString34,  _flprogMenuNameString35,  _flprogMenuNameString36,  _flprogMenuNameString37,  _flprogMenuNameString38,  _flprogMenuNameString39,  _flprogMenuNameString40,  _flprogMenuNameString41,  _flprogMenuNameString42,  _flprogMenuNameString43,  _flprogMenuNameString44,  _flprogMenuNameString45,  _flprogMenuNameString46,  _flprogMenuNameString47,  _flprogMenuNameString48,  _flprogMenuNameString49,  _flprogMenuNameString50,  _flprogMenuNameString51,  _flprogMenuNameString52,  _flprogMenuNameString53,  _flprogMenuNameString54,  _flprogMenuNameString55,  _flprogMenuNameString56,  _flprogMenuNameString57,  _flprogMenuNameString58,  _flprogMenuNameString59,  _flprogMenuNameString60,  _flprogMenuNameString61,  _flprogMenuNameString62,  _flprogMenuNameString63,  _flprogMenuNameString64,  _flprogMenuNameString65,  _flprogMenuNameString66,  _flprogMenuNameString67,  _flprogMenuNameString68,  _flprogMenuNameString69,  _flprogMenuNameString70,  _flprogMenuNameString71,  _flprogMenuNameString72,  _flprogMenuNameString73,  _flprogMenuNameString74,  _flprogMenuNameString75,  _flprogMenuNameString76,  _flprogMenuNameString77,  _flprogMenuNameString78,  _flprogMenuNameString79,  _flprogMenuNameString80,  _flprogMenuNameString81,  _flprogMenuNameString82,  _flprogMenuNameString83,  _flprogMenuNameString84,  _flprogMenuNameString85,  _flprogMenuNameString86,  _flprogMenuNameString87,  _flprogMenuNameString88,  _flprogMenuNameString89,  _flprogMenuNameString90,  _flprogMenuNameString91,  _flprogMenuNameString92,  _flprogMenuNameString93,  _flprogMenuNameString94};
+struct _menuItemStricture {
+ int startInArrayIndex;
+};
+struct _menuMainStricture {
+ String tempString;
+ int startIndex;
+ int stopIndex;
+ bool isSwitchMenuAroundRing;
+_menuItemStricture  currentItem;
+};
+_menuItemStricture _MenuItems[76];
+_menuMainStricture _MainMenus[1];
+struct _I2CRealRimeClockTime
+{
+ byte seconds = 0;
+ byte minutes = 0;
+ byte Hours = 0;
+ byte weekday = 0;
+ byte day = 0;
+ byte month = 0;
+ byte year = 0;
+ unsigned long startTime = 0;
+};
+_I2CRealRimeClockTime _RTC1;
+bool _gtv1 = 0;
+int _gtv2 = 25; //Датчик температуры
+String _gtv3;
+bool _gtv4 = 0; //Выход группы А
+bool _gtv5 = 0; //Выход группы B
+bool _gtv6 = 0; //Выход группы C
+bool _gtv7 = 0; //Выход группы D
+bool _gtv8 = 0; //активно МЕНЮ
+bool _gtv9 = 0; //задержка - контроль нажимания кнопок
+bool _gtv10 = 0; //Сброс к домашней странице
+bool _gtv11 = 0; //Кнопка ENTER - 1 короткое нажатие
+bool _gtv12 = 0; //Кнопка ENTER - 1 длинное нажатие
+bool _gtv13 = 0; //Пароль введен правильно
+String _gtv14 = "0"; //Введена 4 цифра пароля
+String _gtv16 = "0"; //Введена 3 цифра пароля
+bool _gtv17 = 0; //импульс установки дата/время в часы реального времени
+String _gtv15 = "0"; //Введена 1 цифра пароля
+bool _gtv18 = 0; //Ошибка Ф-теста
+String _gtv19 = "Ф.тест ";
+bool _gtv20 = 0;
+bool _gtv21 = 0;
+bool _gtv22 = 0;
+bool _gtv23 = 0;
+bool _gtv24 = 0;
+bool _gtv25 = 0;
+bool _gtv26 = 0;
+bool _gtv27 = 0;
+bool _gtv28 = 0;
+bool _gtv29 = 0;
+bool _gtv30 = 0;
+bool _gtv31 = 0;
+bool _gtv32 = 0;
+bool _gtv33 = 0;
+bool _gtv34 = 0;
+bool _gtv35 = 0;
+String _gtv36 = "0"; //Введена 2 цифра пароля
+bool _gtv37 = 0; //Кнопка RETURN - 1 короткое нажатие
+bool _gtv38 = 0; //Кнопка RETURN - 1 длинное нажатие
+bool _gtv39 = 0; //включение Ф-теста
+bool _gtv40 = 0; //RESET Функциональный тест
+bool _gtv41 = 0; //сброс к домашней странице при неправильном пароле
+bool _gtv42 = 0; //Ошибка теста АКБ
+bool _gtv43 = 0; //сигнал записи успешного окончания ф-теста
+bool _gtv44 = 0; //Нажатие любой кнопки
+bool _gtv45 = 0; //Запуск теста АКБ
+bool _gtv46 = 0; //Сигнал успешного прохождения теста
+bool _gtv47 = 0; //Высокая температура
+String _gtv48; //Дата-время для SD-карты
+int _swi39;
+String _swi32;
+int _swi23;
+bool _bounseInputD31S = 0;
+bool _bounseInputD31O = 0;
+unsigned long _bounseInputD31P = 0UL;
+bool _trgrt6 = 0;
+bool _trgrt6I = 0;
+int _swi43;
+int _swi41;
+bool _bounseInputD28S = 0;
+bool _bounseInputD28O = 0;
+unsigned long _bounseInputD28P = 0UL;
+bool _trgrt22 = 0;
+bool _trgrt22I = 0;
+bool _sd1SVOS21 = 0;
+bool _bounseInputD30S = 0;
+bool _bounseInputD30O = 0;
+unsigned long _bounseInputD30P = 0UL;
+bool _trgrt23 = 0;
+bool _trgrt23I = 0;
+bool _bounseInputD27S = 0;
+bool _bounseInputD27O = 0;
+unsigned long _bounseInputD27P = 0UL;
+bool _gen4I = 0;
+bool _gen4O = 0;
+unsigned long _gen4P = 0UL;
+bool _bounseInputD29S = 0;
+bool _bounseInputD29O = 0;
+unsigned long _bounseInputD29P = 0UL;
+bool _bounseInputD23S = 0;
+bool _bounseInputD23O = 0;
+unsigned long _bounseInputD23P = 0UL;
+bool _bounseInputD26S = 0;
+bool _bounseInputD26O = 0;
+unsigned long _bounseInputD26P = 0UL;
+bool _trgrt17 = 0;
+bool _trgrt17I = 0;
+bool _dms4Q0 = 0;
+bool _dms4Q1 = 0;
+bool FTrig_4_Out = 0;
+bool FTrig_4_OldStat = 0;
+bool _bounseInputD22S = 0;
+bool _bounseInputD22O = 0;
+unsigned long _bounseInputD22P = 0UL;
+bool _bounseInputD25S = 0;
+bool _bounseInputD25O = 0;
+unsigned long _bounseInputD25P = 0UL;
+bool _RTCST_Ost1 = 0;
+bool FTrig_14_Out = 0;
+bool FTrig_14_OldStat = 0;
+bool _trgrt29 = 0;
+bool _trgrt29I = 0;
+bool _sowb1_needScan = 0;
+bool _sowb1_ost = 0;
+bool _sowb1_Out_1 = 0;
+bool _RTCAlO2 = 0;
+bool _count3I = 0;
+unsigned long _count3_Value = 0UL;
+bool _count3MinLO = 0;
+bool _Terminal_202317312;
+bool _tim5I = 0;
+bool _tim5O = 0;
+unsigned long _tim5P = 0UL;
+unsigned long _d18x2x1Tti = 0UL;
+float _d18x2x1O = 0.00;
+bool _swi24;
+bool _Terminal_29610707;
+String _RTC1_GetTime2_StrOut;
+byte _RTC1_GetTime2_DowOut = 0;
+String _swi7;
+bool _bounse10S = 0;
+bool _bounse10O = 0;
+unsigned long _bounse10P = 0UL;
+String _mux5;
+int _swi4;
+int _swi25;
+bool _trgrt40 = 0;
+bool _trgrt40I = 0;
+bool _bounse1S = 0;
+bool _bounse1O = 0;
+unsigned long _bounse1P = 0UL;
+bool FTrig_6_Out = 0;
+bool FTrig_6_OldStat = 0;
+bool _trgrt37 = 0;
+bool _trgrt37I = 0;
+bool _bounse11S = 0;
+bool _bounse11O = 0;
+unsigned long _bounse11P = 0UL;
+bool FTrig_13_Out = 0;
+bool FTrig_13_OldStat = 0;
+bool _gen9I = 0;
+bool _gen9O = 0;
+unsigned long _gen9P = 0UL;
+bool _swi29;
+int _swi5;
+bool _sd1SVOS18 = 0;
+bool _SEEPR1OSN = 0;
+bool _sd1SVOS16 = 0;
+bool _trgrt35 = 0;
+bool _trgrt35I = 0;
+bool _trgrt11 = 0;
+bool _trgrt11I = 0;
+bool _bounse3S = 0;
+bool _bounse3O = 0;
+unsigned long _bounse3P = 0UL;
+bool FTrig_8_Out = 0;
+bool FTrig_8_OldStat = 0;
+bool _bounse2S = 0;
+bool _bounse2O = 0;
+unsigned long _bounse2P = 0UL;
+bool FTrig_7_Out = 0;
+bool FTrig_7_OldStat = 0;
+bool _trgrt9 = 0;
+bool _trgrt9I = 0;
+bool _trgrt26 = 0;
+bool _trgrt26I = 0;
+int _swi9;
+bool _sd1SVOS1 = 0;
+bool _swi28;
+String _swi37;
+int _swi8;
+bool _sd1SVOS20 = 0;
+bool _trgrt27 = 0;
+bool _trgrt27I = 0;
+String _swi33;
+bool FTrig_15_Out = 0;
+bool FTrig_15_OldStat = 0;
+bool _bounse5S = 0;
+bool _bounse5O = 0;
+unsigned long _bounse5P = 0UL;
+bool FTrig_10_Out = 0;
+bool FTrig_10_OldStat = 0;
+bool _bounse4S = 0;
+bool _bounse4O = 0;
+unsigned long _bounse4P = 0UL;
+bool FTrig_9_Out = 0;
+bool FTrig_9_OldStat = 0;
+bool _swi31;
+bool _SETFA5 = 0;
+bool _dms3Q0 = 0;
+bool _dms3Q1 = 0;
+bool _dms3Q2 = 0;
+bool _dms3Q3 = 0;
+bool _dms3Q4 = 0;
+String _swi35;
+bool FTrig_17_Out = 0;
+bool FTrig_17_OldStat = 0;
+int _swi11;
+bool _sd1SVOS6 = 0;
+int _swi10;
+bool _sd1SVOS4 = 0;
+bool _bounse9S = 0;
+bool _bounse9O = 0;
+unsigned long _bounse9P = 0UL;
+bool _SETFA2 = 0;
+bool _bounse7S = 0;
+bool _bounse7O = 0;
+unsigned long _bounse7P = 0UL;
+bool _bounse6S = 0;
+bool _bounse6O = 0;
+unsigned long _bounse6P = 0UL;
+bool FTrig_11_Out = 0;
+bool FTrig_11_OldStat = 0;
+bool _trgrt43 = 0;
+bool _trgrt43I = 0;
+int _swi13;
+bool _sd1SVOS10 = 0;
+int _swi12;
+bool _sd1SVOS8 = 0;
+bool _bounse8S = 0;
+bool _bounse8O = 0;
+unsigned long _bounse8P = 0UL;
+bool FTrig_1_Out = 0;
+bool FTrig_1_OldStat = 0;
+bool _trgrt21 = 0;
+bool _trgrt21I = 0;
+bool FTrig_2_Out = 0;
+bool FTrig_2_OldStat = 0;
+bool _sd1SVOS13 = 0;
+int _swi14;
+bool _trgrt3 = 0;
+bool _trgrt3I = 0;
+bool _trgrt30 = 0;
+bool _trgrt30I = 0;
+bool _swi45;
+bool _trgrt28 = 0;
+bool _trgrt28I = 0;
+bool _trgrt41 = 0;
+bool _trgrt41I = 0;
+bool _sd1SVOS14 = 0;
+bool _gen7I = 0;
+bool _gen7O = 0;
+unsigned long _gen7P = 0UL;
+bool _trgs3 = 0;
+bool _sd1SVOS24 = 0;
+int _swi22;
+String _mux1;
+int _swi2;
+bool _swi46;
+bool _sd1SVOS25 = 0;
+bool _tim2I = 0;
+bool _tim2O = 0;
+unsigned long _tim2P = 0UL;
+int _swi26;
+String _mux6;
+String _mux8;
+bool _gen10I = 0;
+bool _gen10O = 0;
+unsigned long _gen10P = 0UL;
+bool _trgrt18 = 0;
+bool _trgrt18I = 0;
+int _swi42;
+int _swi40;
+bool _trgrt5 = 0;
+bool _trgrt5I = 0;
+int _swi44;
+bool FTrig_5_Out = 0;
+bool FTrig_5_OldStat = 0;
+int _swi15;
+bool _tim1I = 0;
+bool _tim1O = 0;
+unsigned long _tim1P = 0UL;
+bool _trgrt20 = 0;
+bool _trgrt20I = 0;
+bool _trgr1 = 0;
+bool _trgrt10 = 0;
+bool _trgrt10I = 0;
+bool _gen3I = 0;
+bool _gen3O = 0;
+unsigned long _gen3P = 0UL;
+bool _tim3I = 0;
+bool _tim3O = 0;
+unsigned long _tim3P = 0UL;
+bool _dms2Q0 = 0;
+bool _dms2Q1 = 0;
+bool _dms2Q2 = 0;
+int _swi19;
+bool _gen1I = 0;
+bool _gen1O = 0;
+unsigned long _gen1P = 0UL;
+bool _RTCAlO3 = 0;
+bool _gen5I = 0;
+bool _gen5O = 0;
+unsigned long _gen5P = 0UL;
+bool _Terminal_219391378;
+bool _SFLPAS10;
+bool _trgrt19 = 0;
+bool _trgrt19I = 0;
+bool _sd1SVOS15 = 0;
+bool _trgrt34 = 0;
+bool _trgrt34I = 0;
+bool _sd1SVOS22 = 0;
+bool _gen2I = 0;
+bool _gen2O = 0;
+unsigned long _gen2P = 0UL;
+bool _swi30;
+bool _SFLPAS1;
+bool _trgrt13 = 0;
+bool _trgrt13I = 0;
+bool _trgrt39 = 0;
+bool _trgrt39I = 0;
+bool _SFLPAS11;
+bool _trgrt8 = 0;
+bool _trgrt8I = 0;
+bool _trgrt36 = 0;
+bool _trgrt36I = 0;
+bool _trgrt38 = 0;
+bool _trgrt38I = 0;
+bool _trgrt33 = 0;
+bool _trgrt33I = 0;
+bool _gen6I = 0;
+bool _gen6O = 0;
+unsigned long _gen6P = 0UL;
+bool _bounse13S = 0;
+bool _bounse13O = 0;
+unsigned long _bounse13P = 0UL;
+bool _sd1SVOS19 = 0;
+bool _SEEPR2OSN = 0;
+bool _trgrt7 = 0;
+bool _trgrt7I = 0;
+bool _sd1SVOS17 = 0;
+int _swi49;
+bool _trgs4 = 0;
+bool _SFLPAS3;
+bool _SFLPAS2;
+bool _trgrt12 = 0;
+bool _trgrt12I = 0;
+String _swi34;
+bool _tim4I = 0;
+bool _tim4O = 0;
+unsigned long _tim4P = 0UL;
+bool FTrig_16_Out = 0;
+bool FTrig_16_OldStat = 0;
+bool _trgs1 = 0;
+bool _sd1SVOS3 = 0;
+bool _trgrt24 = 0;
+bool _trgrt24I = 0;
+String _swi38;
+bool _sd1SVOS2 = 0;
+String _swi36;
+String _swi16;
+bool _SFLPAS5;
+bool _SFLPAS4;
+bool _trgrt15 = 0;
+bool _trgrt15I = 0;
+bool _bounse12S = 0;
+bool _bounse12O = 0;
+unsigned long _bounse12P = 0UL;
+String _swi3;
+bool _trgrt14 = 0;
+bool _trgrt14I = 0;
+bool _gen8I = 0;
+bool _gen8O = 0;
+unsigned long _gen8P = 0UL;
+bool _SETFA4 = 0;
+bool _count2I = 0;
+bool _count2_SCST = 0;
+int _count2_Value = 0;
+bool _sd1SVOS7 = 0;
+bool _sd1SVOS5 = 0;
+bool _mkb1C1xP1 = 0;
+bool _mkb1C1xP2 = 0;
+bool _mkb1C1xP3 = 0;
+bool _mkb1C1xP4 = 0;
+bool _mkb1C2xP1 = 0;
+bool _mkb1C2xP2 = 0;
+bool _mkb1C2xP3 = 0;
+bool _mkb1C2xP4 = 0;
+bool _mkb1C3xP1 = 0;
+bool _mkb1C3xP2 = 0;
+bool _mkb1C3xP3 = 0;
+bool _mkb1C3xP4 = 0;
+bool _mkb1C4xP1 = 0;
+bool _mkb1C4xP2 = 0;
+bool _mkb1C4xP3 = 0;
+bool _mkb1C4xP4 = 0;
+bool _SETFA1 = 0;
+bool _MenuBlock_98070487_AMO_110573979 = 0;
+bool _MenuBlock_98070487_AMO_174410340 = 0;
+bool _MenuBlock_98070487_AMO_152766230 = 0;
+bool _MenuBlock_98070487_AMO_1374227 = 0;
+bool _MenuBlock_98070487_AMO_78395074 = 0;
+bool _MenuBlock_98070487_AMO_140792278 = 0;
+bool _MenuBlock_98070487_AMO_243644557 = 0;
+bool _MenuBlock_98070487_AMO_94042602 = 0;
+bool _MenuBlock_98070487_AMO_188655611 = 0;
+bool _MenuBlock_98070487_AMO_214942154 = 0;
+bool _MenuBlock_98070487_AMO_54351946 = 0;
+bool _MenuBlock_98070487_AMO_82053453 = 0;
+bool _MenuBlock_98070487_AMO_174116671 = 0;
+bool _MenuBlock_98070487_AMO_149198026 = 0;
+bool _MenuBlock_98070487_AMO_231464087 = 0;
+bool _MenuBlock_98070487_AMO_14990655 = 0;
+bool _MenuBlock_98070487_AMO_2142001 = 0;
+bool _MenuBlock_98070487_AMO_140906228 = 0;
+bool _MenuBlock_98070487_AMO_74286321 = 0;
+bool _MenuBlock_98070487_AMO_172078273 = 0;
+bool _MenuBlock_98070487_AMO_11020172 = 0;
+bool _MenuBlock_98070487_AMO_83097424 = 0;
+bool _MenuBlock_98070487_AMO_8595930 = 0;
+bool _MenuBlock_98070487_AMO_126820076 = 0;
+bool _MenuBlock_98070487_AMO_91568022 = 0;
+bool _MenuBlock_98070487_AMO_13225397 = 0;
+bool _MenuBlock_98070487_AMO_114896351 = 0;
+bool _MenuBlock_98070487_AMO_96852826 = 0;
+bool _MenuBlock_98070487_AMO_135006846 = 0;
+bool _MenuBlock_98070487_AMO_259145164 = 0;
+bool _MenuBlock_98070487_AMO_258608421 = 0;
+bool _MenuBlock_98070487_AMO_260763075 = 0;
+bool _MenuBlock_98070487_AMO_231405590 = 0;
+String _MenuBlock_98070487_ASO_1;
+String _MenuBlock_98070487_ASO_2;
+String _MenuBlock_98070487_MNO;
+String _MenuBlock_98070487_VNO;
+bool _MenuBlock_98070487_OEIS = 0;
+bool _MenuBlock_98070487_OMUIS = 0;
+bool _MenuBlock_98070487_OMDIS = 0;
+bool _MenuBlock_98070487_OEMIS = 0;
+bool _MenuBlock_98070487_OExFMIS = 0;
+bool _MenuBlock_98070487_OVUIS = 0;
+bool _MenuBlock_98070487_OVDIS = 0;
+bool _MenuBlock_98070487_IDI_0 = 0;
+bool _MenuBlock_98070487_IDI_1 = 0;
+bool _MenuBlock_98070487_IDI_2 = 0;
+bool _MenuBlock_98070487_IDI_3 = 0;
+bool _MenuBlock_98070487_IDI_4 = 0;
+bool _MenuBlock_98070487_IDI_5 = 0;
+bool _MenuBlock_98070487_IDI_6 = 0;
+bool _MenuBlock_98070487_IDI_7 = 0;
+bool _MenuBlock_98070487_IDI_8 = 0;
+bool _MenuBlock_98070487_IDI_9 = 0;
+bool _SFLPAS6;
+bool _trgrt1 = 0;
+bool _trgrt1I = 0;
+bool _trgrt16 = 0;
+bool _trgrt16I = 0;
+bool _trgs6 = 0;
+bool _sd1SVOS11 = 0;
+bool _sd1SVOS9 = 0;
+String _swi6;
+bool _SFLPAS8;
+bool _sd1SVOS12 = 0;
+bool _SFLPAS7;
+bool _trgrt2 = 0;
+bool _trgrt2I = 0;
+String _swi20;
+String _swi27;
+bool FTrig_3_Out = 0;
+bool FTrig_3_OldStat = 0;
+bool _trgrt31 = 0;
+bool _trgrt31I = 0;
+String _mux3;
+String _swi21;
+bool _trgrt4 = 0;
+bool _trgrt4I = 0;
+int _swi1;
+String _swi18;
+bool _trgrt25 = 0;
+bool _trgrt25I = 0;
+bool _sd1SVOS23 = 0;
+bool _trgrt32 = 0;
+bool _trgrt32I = 0;
+int _swi17;
+bool _trgs2 = 0;
+String _mux2;
+bool _swi48;
+String _mux7;
+bool _trgrt42 = 0;
+bool _trgrt42I = 0;
+bool FTrig_12_Out = 0;
+bool FTrig_12_OldStat = 0;
+bool _trgs5 = 0;
+String _mux4;
+bool _swi47;
+
+bool _tempVariable_bool;
+int _tempVariable_int;
+float _tempVariable_float;
+
+void setup()
+{
+
+pinMode(22, INPUT_PULLUP); 
+pinMode(23, INPUT_PULLUP); 
+pinMode(25, INPUT_PULLUP); 
+pinMode(26, INPUT_PULLUP); 
+pinMode(27, INPUT_PULLUP); 
+pinMode(28, INPUT_PULLUP); 
+pinMode(29, INPUT_PULLUP); 
+pinMode(30, INPUT_PULLUP); 
+pinMode(31, INPUT_PULLUP); 
+pinMode(40, OUTPUT); 
+digitalWrite(40, 0); 
+pinMode(54, OUTPUT); 
+digitalWrite(54, 0); 
+pinMode(55, OUTPUT); 
+digitalWrite(55, 0); 
+pinMode(56, OUTPUT); 
+digitalWrite(56, 0); 
+pinMode(57, OUTPUT); 
+digitalWrite(57, 0); 
+pinMode(58, OUTPUT); 
+digitalWrite(58, 0); 
+pinMode(59, OUTPUT); 
+digitalWrite(59, 0); 
+pinMode(60, OUTPUT); 
+digitalWrite(60, 0); 
+pinMode(61, OUTPUT); 
+digitalWrite(61, 0); 
+pinMode(62, OUTPUT); 
+digitalWrite(62, 0); 
+pinMode(63, OUTPUT); 
+digitalWrite(63, 0); 
+pinMode(2, OUTPUT); 
+digitalWrite(2, 0); 
+pinMode(3, OUTPUT); 
+digitalWrite(3, 0); 
+pinMode(4, OUTPUT); 
+digitalWrite(4, 0); 
+pinMode(5, OUTPUT); 
+digitalWrite(5, 0); 
+pinMode(6, OUTPUT); 
+digitalWrite(6, 0); 
+pinMode(7, OUTPUT); 
+digitalWrite(7, 0); 
+pinMode(8, OUTPUT); 
+digitalWrite(8, 0); 
+pinMode(9, OUTPUT); 
+digitalWrite(9, 0); 
+pinMode(10, OUTPUT); 
+digitalWrite(10, 0); 
+pinMode(11, OUTPUT); 
+digitalWrite(11, 0); 
+
+
+Wire.begin();
+delay(10);
+if(((readByteFromEEPROM(0, 0, 0x0))) != 49) {
+(updateByteToEEPROM(0, 0, 0x0, (49)));
+(updateBooleanToEEPROM(1, 0, 0x0, (0)));
+(updateBooleanToEEPROM(1, 1, 0x0, (0)));
+(updateBooleanToEEPROM(1, 2, 0x0, (1)));
+(updateBooleanToEEPROM(1, 3, 0x0, (1)));
+(updateBooleanToEEPROM(1, 4, 0x0, (0)));
+(updateBooleanToEEPROM(1, 5, 0x0, (0)));
+(updateBooleanToEEPROM(1, 6, 0x0, (0)));
+(updateBooleanToEEPROM(1, 7, 0x0, (0)));
+(updateBooleanToEEPROM(2, 0, 0x0, (1)));
+(updateBooleanToEEPROM(2, 1, 0x0, (0)));
+(updateBooleanToEEPROM(2, 2, 0x0, (1)));
+(updateBooleanToEEPROM(2, 3, 0x0, (0)));
+(updateBooleanToEEPROM(2, 4, 0x0, (0)));
+(updateBooleanToEEPROM(2, 5, 0x0, (0)));
+(updateIntegerToEEPROM(3, 0, 0x0, (12)));
+(updateIntegerToEEPROM(5, 0, 0x0, (2025)));
+(updateIntegerToEEPROM(7, 0, 0x0, (0)));
+(updateIntegerToEEPROM(9, 0, 0x0, (1)));
+(updateIntegerToEEPROM(11, 0, 0x0, (0)));
+(updateIntegerToEEPROM(13, 0, 0x0, (5)));
+(updateIntegerToEEPROM(15, 0, 0x0, (30)));
+(updateIntegerToEEPROM(17, 0, 0x0, (5)));
+(updateIntegerToEEPROM(19, 0, 0x0, (15)));
+(updateIntegerToEEPROM(21, 0, 0x0, (2)));
+(updateIntegerToEEPROM(23, 0, 0x0, (40)));
+(updateIntegerToEEPROM(25, 0, 0x0, (12)));
+(updateIntegerToEEPROM(27, 0, 0x0, (2)));
+(updateIntegerToEEPROM(29, 0, 0x0, (0)));
+(updateIntegerToEEPROM(31, 0, 0x0, (0)));
+(updateIntegerToEEPROM(33, 0, 0x0, (2)));
+(updateIntegerToEEPROM(35, 0, 0x0, (30)));
+(updateIntegerToEEPROM(37, 0, 0x0, (15)));
+(updateIntegerToEEPROM(39, 0, 0x0, (0)));
+(updateIntegerToEEPROM(41, 0, 0x0, (1)));
+(updateIntegerToEEPROM(43, 0, 0x0, (60)));
+}
+Wire.beginTransmission(68);
+Wire.write(0x0E);
+Wire.write(B00000000);
+Wire.write(B10001000);
+Wire.endTransmission();
+_RTC1.startTime = millis() - 1000;
+_bounseInputD28O =    digitalRead(28);
+_bounseInputD31O =    digitalRead(31);
+_bounseInputD29O =    digitalRead(29);
+_bounseInputD26O =    digitalRead(26);
+_bounseInputD22O =    digitalRead(22);
+_bounseInputD23O =    digitalRead(23);
+_bounseInputD27O =    digitalRead(27);
+_bounseInputD30O =    digitalRead(30);
+_bounseInputD25O =    digitalRead(25);
+SD.begin(49);
+SPI.begin();
+pinMode(36, INPUT_PULLUP);
+pinMode(37, INPUT_PULLUP);
+pinMode(68, INPUT_PULLUP);
+pinMode(69, INPUT_PULLUP);
+pinMode(32, OUTPUT);
+digitalWrite(32, HIGH);
+pinMode(33, OUTPUT);
+digitalWrite(33, HIGH);
+pinMode(34, OUTPUT);
+digitalWrite(34, HIGH);
+pinMode(35, OUTPUT);
+digitalWrite(35, HIGH);
+  lcd.init();
+  lcd.backlight();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ _MenuItems[0].startInArrayIndex = 0;
+ _MenuItems[1].startInArrayIndex = 14;
+ _MenuItems[2].startInArrayIndex = 28;
+ _MenuItems[3].startInArrayIndex = 42;
+ _MenuItems[4].startInArrayIndex = 56;
+ _MenuItems[5].startInArrayIndex = 70;
+ _MenuItems[6].startInArrayIndex = 84;
+ _MenuItems[7].startInArrayIndex = 98;
+ _MenuItems[8].startInArrayIndex = 112;
+ _MenuItems[9].startInArrayIndex = 126;
+ _MenuItems[10].startInArrayIndex = 140;
+ _MenuItems[11].startInArrayIndex = 154;
+ _MenuItems[12].startInArrayIndex = 168;
+ _MenuItems[13].startInArrayIndex = 182;
+ _MenuItems[14].startInArrayIndex = 196;
+ _MenuItems[15].startInArrayIndex = 210;
+ _MenuItems[16].startInArrayIndex = 224;
+ _MenuItems[17].startInArrayIndex = 238;
+ _MenuItems[18].startInArrayIndex = 252;
+ _MenuItems[19].startInArrayIndex = 266;
+ _MenuItems[20].startInArrayIndex = 280;
+ _MenuItems[21].startInArrayIndex = 294;
+ _MenuItems[22].startInArrayIndex = 308;
+ _MenuItems[23].startInArrayIndex = 322;
+ _MenuItems[24].startInArrayIndex = 336;
+ _MenuItems[25].startInArrayIndex = 350;
+ _MenuItems[26].startInArrayIndex = 364;
+ _MenuItems[27].startInArrayIndex = 378;
+ _MenuItems[28].startInArrayIndex = 392;
+ _MenuItems[29].startInArrayIndex = 406;
+ _MenuItems[30].startInArrayIndex = 420;
+ _MenuItems[31].startInArrayIndex = 434;
+ _MenuItems[32].startInArrayIndex = 448;
+ _MenuItems[33].startInArrayIndex = 462;
+ _MenuItems[34].startInArrayIndex = 476;
+ _MenuItems[35].startInArrayIndex = 490;
+ _MenuItems[36].startInArrayIndex = 504;
+ _MenuItems[37].startInArrayIndex = 518;
+ _MenuItems[38].startInArrayIndex = 532;
+ _MenuItems[39].startInArrayIndex = 546;
+ _MenuItems[40].startInArrayIndex = 560;
+ _MenuItems[41].startInArrayIndex = 574;
+ _MenuItems[42].startInArrayIndex = 588;
+ _MenuItems[43].startInArrayIndex = 602;
+ _MenuItems[44].startInArrayIndex = 616;
+ _MenuItems[45].startInArrayIndex = 630;
+ _MenuItems[46].startInArrayIndex = 644;
+ _MenuItems[47].startInArrayIndex = 658;
+ _MenuItems[48].startInArrayIndex = 672;
+ _MenuItems[49].startInArrayIndex = 686;
+ _MenuItems[50].startInArrayIndex = 700;
+ _MenuItems[51].startInArrayIndex = 714;
+ _MenuItems[52].startInArrayIndex = 728;
+ _MenuItems[53].startInArrayIndex = 742;
+ _MenuItems[54].startInArrayIndex = 756;
+ _MenuItems[55].startInArrayIndex = 770;
+ _MenuItems[56].startInArrayIndex = 784;
+ _MenuItems[57].startInArrayIndex = 798;
+ _MenuItems[58].startInArrayIndex = 812;
+ _MenuItems[59].startInArrayIndex = 826;
+ _MenuItems[60].startInArrayIndex = 840;
+ _MenuItems[61].startInArrayIndex = 854;
+ _MenuItems[62].startInArrayIndex = 868;
+ _MenuItems[63].startInArrayIndex = 882;
+ _MenuItems[64].startInArrayIndex = 896;
+ _MenuItems[65].startInArrayIndex = 910;
+ _MenuItems[66].startInArrayIndex = 924;
+ _MenuItems[67].startInArrayIndex = 938;
+ _MenuItems[68].startInArrayIndex = 952;
+ _MenuItems[69].startInArrayIndex = 966;
+ _MenuItems[70].startInArrayIndex = 980;
+ _MenuItems[71].startInArrayIndex = 994;
+ _MenuItems[72].startInArrayIndex = 1008;
+ _MenuItems[73].startInArrayIndex = 1022;
+ _MenuItems[74].startInArrayIndex = 1036;
+ _MenuItems[75].startInArrayIndex = 1050;
+_MainMenus[0].tempString = "";
+_MainMenus[0].startIndex = 1;
+_MainMenus[0].isSwitchMenuAroundRing = 1;
+_MainMenus[0].stopIndex = 6;
+_MainMenus[0].currentItem = _MenuItems[0];
+_menuValueArray_int[0] = (readIntegerFromEEPROM(3, 0, 0x0));
+_menuValueArray_bool[0] = (readBooleanFromEEPROM(1, 0, 0x0));
+_menuValueArray_int[1] = (readIntegerFromEEPROM(5, 0, 0x0));
+_menuValueArray_int[2] = (readIntegerFromEEPROM(7, 0, 0x0));
+_menuValueArray_int[3] = (readIntegerFromEEPROM(9, 0, 0x0));
+_menuValueArray_int[4] = (readIntegerFromEEPROM(11, 0, 0x0));
+_menuValueArray_int[5] = (readIntegerFromEEPROM(13, 0, 0x0));
+_menuValueArray_bool[1] = (readBooleanFromEEPROM(1, 1, 0x0));
+_menuValueArray_int[6] = (readIntegerFromEEPROM(15, 0, 0x0));
+_menuValueArray_bool[2] = (readBooleanFromEEPROM(1, 2, 0x0));
+_menuValueArray_int[7] = (readIntegerFromEEPROM(17, 0, 0x0));
+_menuValueArray_int[8] = (readIntegerFromEEPROM(19, 0, 0x0));
+_menuValueArray_int[9] = (readIntegerFromEEPROM(21, 0, 0x0));
+_menuValueArray_int[10] = (readIntegerFromEEPROM(23, 0, 0x0));
+_menuValueArray_bool[3] = (readBooleanFromEEPROM(1, 3, 0x0));
+_menuValueArray_int[11] = (readIntegerFromEEPROM(25, 0, 0x0));
+_menuValueArray_bool[4] = (readBooleanFromEEPROM(1, 4, 0x0));
+_menuValueArray_bool[5] = (readBooleanFromEEPROM(1, 5, 0x0));
+_menuValueArray_int[12] = (readIntegerFromEEPROM(27, 0, 0x0));
+_menuValueArray_bool[6] = (readBooleanFromEEPROM(1, 6, 0x0));
+_menuValueArray_int[13] = (readIntegerFromEEPROM(29, 0, 0x0));
+_menuValueArray_int[14] = (readIntegerFromEEPROM(31, 0, 0x0));
+_menuValueArray_bool[7] = (readBooleanFromEEPROM(1, 7, 0x0));
+_menuValueArray_bool[8] = (readBooleanFromEEPROM(2, 0, 0x0));
+_menuValueArray_int[15] = (readIntegerFromEEPROM(33, 0, 0x0));
+_menuValueArray_bool[9] = (readBooleanFromEEPROM(2, 1, 0x0));
+_menuValueArray_bool[10] = (readBooleanFromEEPROM(2, 2, 0x0));
+_menuValueArray_bool[11] = (readBooleanFromEEPROM(2, 3, 0x0));
+_menuValueArray_int[16] = (readIntegerFromEEPROM(35, 0, 0x0));
+_menuValueArray_int[17] = (readIntegerFromEEPROM(37, 0, 0x0));
+_menuValueArray_int[18] = (readIntegerFromEEPROM(39, 0, 0x0));
+_menuValueArray_int[19] = (readIntegerFromEEPROM(41, 0, 0x0));
+_menuValueArray_int[20] = (readIntegerFromEEPROM(43, 0, 0x0));
+
+
+}
+void loop()
+{
+
+
+
+bool  _bounceInputTmpD30 =  (digitalRead (30));
+
+if (_bounseInputD30S) 
+    {
+     if (millis() >= (_bounseInputD30P + 40)) 
+         {_bounseInputD30O= _bounceInputTmpD30; _bounseInputD30S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD30 != _bounseInputD30O )
+         {_bounseInputD30S=1; _bounseInputD30P = millis();} 
+      } 
+bool  _bounceInputTmpD22 =  (digitalRead (22));
+
+if (_bounseInputD22S) 
+    {
+     if (millis() >= (_bounseInputD22P + 40)) 
+         {_bounseInputD22O= _bounceInputTmpD22; _bounseInputD22S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD22 != _bounseInputD22O )
+         {_bounseInputD22S=1; _bounseInputD22P = millis();} 
+      } 
+bool  _bounceInputTmpD28 =  (digitalRead (28));
+
+if (_bounseInputD28S) 
+    {
+     if (millis() >= (_bounseInputD28P + 40)) 
+         {_bounseInputD28O= _bounceInputTmpD28; _bounseInputD28S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD28 != _bounseInputD28O )
+         {_bounseInputD28S=1; _bounseInputD28P = millis();} 
+      } 
+bool  _bounceInputTmpD26 =  (digitalRead (26));
+
+if (_bounseInputD26S) 
+    {
+     if (millis() >= (_bounseInputD26P + 40)) 
+         {_bounseInputD26O= _bounceInputTmpD26; _bounseInputD26S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD26 != _bounseInputD26O )
+         {_bounseInputD26S=1; _bounseInputD26P = millis();} 
+      } 
+bool  _bounceInputTmpD31 =  (digitalRead (31));
+
+if (_bounseInputD31S) 
+    {
+     if (millis() >= (_bounseInputD31P + 40)) 
+         {_bounseInputD31O= _bounceInputTmpD31; _bounseInputD31S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD31 != _bounseInputD31O )
+         {_bounseInputD31S=1; _bounseInputD31P = millis();} 
+      } 
+bool  _bounceInputTmpD29 =  (digitalRead (29));
+
+if (_bounseInputD29S) 
+    {
+     if (millis() >= (_bounseInputD29P + 40)) 
+         {_bounseInputD29O= _bounceInputTmpD29; _bounseInputD29S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD29 != _bounseInputD29O )
+         {_bounseInputD29S=1; _bounseInputD29P = millis();} 
+      } 
+bool  _bounceInputTmpD23 =  (digitalRead (23));
+
+if (_bounseInputD23S) 
+    {
+     if (millis() >= (_bounseInputD23P + 40)) 
+         {_bounseInputD23O= _bounceInputTmpD23; _bounseInputD23S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD23 != _bounseInputD23O )
+         {_bounseInputD23S=1; _bounseInputD23P = millis();} 
+      } 
+bool  _bounceInputTmpD27 =  (digitalRead (27));
+
+if (_bounseInputD27S) 
+    {
+     if (millis() >= (_bounseInputD27P + 40)) 
+         {_bounseInputD27O= _bounceInputTmpD27; _bounseInputD27S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD27 != _bounseInputD27O )
+         {_bounseInputD27S=1; _bounseInputD27P = millis();} 
+      } 
+bool  _bounceInputTmpD25 =  (digitalRead (25));
+
+if (_bounseInputD25S) 
+    {
+     if (millis() >= (_bounseInputD25P + 40)) 
+         {_bounseInputD25O= _bounceInputTmpD25; _bounseInputD25S=0;}
+     }
+else
+    {
+     if (_bounceInputTmpD25 != _bounseInputD25O )
+         {_bounseInputD25S=1; _bounseInputD25P = millis();} 
+      } 
+
+
+
+
+//Плата:1
+//Наименование:Стартовая страница
+//Комментарии:Титул на дисплей, запись на SD-карту ПУСК работы ИБП
+
+
+
+if (1) {if (! _gen4I){_gen4I = 1; _gen4O = 1; _gen4P = millis();}} else { _gen4I = 0 ; _gen4O= 0; } if (_gen4I &&  _gen4O)   _gen4O = !( flprog::isTimer( _gen4P , 3000 ));
+FTrig_5_Out = 0;
+if ((!(_gen4O))&&(FTrig_5_OldStat)){FTrig_5_Out = 1;}
+FTrig_5_OldStat = _gen4O;
+En_233382538_3 = _gen4O;
+Text1_233382538_3 = String("Дипломная работа");
+Stroka_233382538_3 = 0;
+Stolb_233382538_3 = 0;
+cle_ar_233382538_3 = FTrig_5_Out;
+
+        if (En_233382538_3) 
+
+        {
+         {
+         if (cle_ar_233382538_3)
+         lcd.clear();
+         }
+        lcd.setCursor(Stolb_233382538_3, Stroka_233382538_3);
+        lcd.print((Text1_233382538_3));
+        }
+
+
+
+if(FTrig_5_Out)
+{if(! _sd1SVOS21) {
+_sd1TS = "start;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("start sistem"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS21 = 1;}}
+else
+{if( _sd1SVOS21) {_sd1SVOS21 = 0; }}
+En_83392563_4 = _gen4O;
+Text1_83392563_4 = String("Дмитриева Ильи");
+Stroka_83392563_4 = 1;
+Stolb_83392563_4 = 0;
+
+        if (En_83392563_4 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_4, Stroka_83392563_4);
+        lcd.print((Text1_83392563_4));
+        }
+
+
+
+En_83392563_6 = _gen4O;
+Text1_83392563_6 = String("Вячеславовича");
+Stroka_83392563_6 = 2;
+Stolb_83392563_6 = 0;
+
+        if (En_83392563_6 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_6, Stroka_83392563_6);
+        lcd.print((Text1_83392563_6));
+        }
+
+
+
+En_83392563_7 = _gen4O;
+Text1_83392563_7 = String("ИБП для системы АО");
+Stroka_83392563_7 = 3;
+Stolb_83392563_7 = 0;
+
+        if (En_83392563_7 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_7, Stroka_83392563_7);
+        lcd.print((Text1_83392563_7));
+        }
+
+
+
+
+//Плата:2
+//Наименование:Page1 - Домашняя страница
+//Комментарии:Инициализация датчика температуры DS18B20 на шине OneWare
+if (1) { if (_trgrt10I) { _trgrt10 = 0;} else {_trgrt10 = 1; _trgrt10I = 1;} } else {_trgrt10 = 0; _trgrt10I = 0;}; 
+ if(_sowb1_needScan){
+if( _oneWireSeach (_FLPArray67347937, _ow38)) {_sowb1_Out_1=1;
+}
+_ow38.reset_search();
+_sowb1_needScan=0;}
+if(_trgrt10){if(! _sowb1_ost) {
+_sowb1_ost=1;
+_sowb1_needScan=1;
+_sowb1_Out_1=0;
+}} else{
+_sowb1_ost=0;
+}
+_gtv1 = _sowb1_Out_1;
+get3231Date(0x68, &_RTC1);
+_RTC1_GetTime2_StrOut = ( _convertRealTimeClockNumberToString(_RTC1.Hours))+
+String(":")+
+( _convertRealTimeClockNumberToString(_RTC1.minutes))+
+String(":")+
+( _convertRealTimeClockNumberToString(_RTC1.seconds))+
+String(" ")+
+( _convertRealTimeClockNumberToString(_RTC1.day))+
+String(".")+
+( _convertRealTimeClockNumberToString(_RTC1.month))+
+String(".")+
+( _convertRealTimeClockNumberToString(_RTC1.year));
+_RTC1_GetTime2_DowOut = _RTC1.weekday;
+_gtv48 = _RTC1_GetTime2_StrOut;
+if((_RTC1_GetTime2_DowOut) == 0) {_mux5 = String("Вс");}
+if((_RTC1_GetTime2_DowOut) == 1) {_mux5 = String("Пн");}
+if((_RTC1_GetTime2_DowOut) == 2) {_mux5 = String("Вт");}
+if((_RTC1_GetTime2_DowOut) == 3) {_mux5 = String("Ср");}
+if((_RTC1_GetTime2_DowOut) == 4) {_mux5 = String("Чт");}
+if((_RTC1_GetTime2_DowOut) == 5) {_mux5 = String("Пт");}
+if((_RTC1_GetTime2_DowOut) == 6) {_mux5 = String("Сб");}
+if((_RTC1_GetTime2_DowOut) == 7) {_mux5 = String("Вс");}
+if(_gtv7)
+{_swi21=String("вкл");}
+else
+{_swi21=String("вык");}
+if((_menuValueArray_bool[2]))
+{_swi42=1;}
+else
+{_swi42=0;}
+if((_menuValueArray_bool[0]))
+{_swi43=2;}
+else
+{_swi43=_swi42;}
+if(( ((_menuValueArray_bool[2])) && ((_menuValueArray_bool[0])) ))
+{_swi44=3;}
+else
+{_swi44=_swi43;}
+if((_swi44) == 0) {_mux8 = String("   ");}
+if((_swi44) == 1) {_mux8 = String("-i ");}
+if((_swi44) == 2) {_mux8 = String("-f ");}
+if((_swi44) == 3) {_mux8 = String("-i,f");}
+En_83392563_8 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_8 = ((String("D-")) + (_swi21) + (_mux8));
+Stroka_83392563_8 = 3;
+Stolb_83392563_8 = 11;
+
+        if (En_83392563_8 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_8, Stroka_83392563_8);
+        lcd.print((Text1_83392563_8));
+        }
+
+
+
+if(_gtv6)
+{_swi20=String("вкл");}
+else
+{_swi20=String("вык");}
+if((_menuValueArray_bool[8]))
+{_swi39=1;}
+else
+{_swi39=0;}
+if((_menuValueArray_bool[4]))
+{_swi40=2;}
+else
+{_swi40=_swi39;}
+if(( ((_menuValueArray_bool[8])) && ((_menuValueArray_bool[4])) ))
+{_swi41=3;}
+else
+{_swi41=_swi40;}
+if((_swi41) == 0) {_mux7 = String("   ");}
+if((_swi41) == 1) {_mux7 = String("-i ");}
+if((_swi41) == 2) {_mux7 = String("-f ");}
+if((_swi41) == 3) {_mux7 = String("-i,f");}
+En_83392563_5 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_5 = ((String("C-")) + (_swi20) + (_mux7));
+Stroka_83392563_5 = 3;
+Stolb_83392563_5 = 0;
+
+        if (En_83392563_5 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_5, Stroka_83392563_5);
+        lcd.print((Text1_83392563_5));
+        }
+
+
+
+if(_gtv5)
+{_swi6=String("вкл");}
+else
+{_swi6=String("вык");}
+if((_menuValueArray_bool[3]))
+{_swi22=1;}
+else
+{_swi22=0;}
+if((_menuValueArray_bool[1]))
+{_swi23=2;}
+else
+{_swi23=_swi22;}
+if(( ((_menuValueArray_bool[3])) && ((_menuValueArray_bool[1])) ))
+{_swi26=3;}
+else
+{_swi26=_swi23;}
+if((_swi26) == 0) {_mux6 = String("   ");}
+if((_swi26) == 1) {_mux6 = String("-i ");}
+if((_swi26) == 2) {_mux6 = String("-f ");}
+if((_swi26) == 3) {_mux6 = String("-i,f");}
+En_83392563_3 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_3 = ((String("B-")) + (_swi6) + (_mux6));
+Stroka_83392563_3 = 2;
+Stolb_83392563_3 = 11;
+
+        if (En_83392563_3 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_3, Stroka_83392563_3);
+        lcd.print((Text1_83392563_3));
+        }
+
+
+
+if(_gtv4)
+{_swi3=String("вкл");}
+else
+{_swi3=String("вык");}
+if((_menuValueArray_bool[10]))
+{_swi1=1;}
+else
+{_swi1=0;}
+if((_menuValueArray_bool[7]))
+{_swi2=2;}
+else
+{_swi2=_swi1;}
+if(( ((_menuValueArray_bool[10])) && ((_menuValueArray_bool[7])) ))
+{_swi17=3;}
+else
+{_swi17=_swi2;}
+if((_swi17) == 0) {_mux2 = String("   ");}
+if((_swi17) == 1) {_mux2 = String("-i ");}
+if((_swi17) == 2) {_mux2 = String("-f ");}
+if((_swi17) == 3) {_mux2 = String("-i,f");}
+En_83392563_2 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_2 = ((String("A-")) + (_swi3) + (_mux2));
+Stroka_83392563_2 = 2;
+Stolb_83392563_2 = 0;
+
+        if (En_83392563_2 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_2, Stroka_83392563_2);
+        lcd.print((Text1_83392563_2));
+        }
+
+
+
+if(_bounseInputD22O)
+{_swi36=String("Авария 230В    ");}
+else
+{_swi36=((String("Автотест ")) + (_gtv19));}
+if(_bounseInputD29O)
+{_swi35=String("Пуск Аварии    ");}
+else
+{_swi35=_swi36;}
+if(_bounseInputD28O)
+{_swi34=String("Авария ЩРО     ");}
+else
+{_swi34=_swi35;}
+if(_bounseInputD27O)
+{_swi33=String("Пожар          ");}
+else
+{_swi33=_swi34;}
+if (( (_bounseInputD22O) || (_bounseInputD29O) || (_bounseInputD28O) || (_bounseInputD27O) )) { if (! _gen8I) { _gen8I = 1; _gen8O = 1; _gen8P = millis(); } } else { _gen8I = 0 ; _gen8O= 0;}
+ if (_gen8I) {  if ( flprog::isTimer ( _gen8P , 1000 )) { _gen8P = millis(); _gen8O = ! _gen8O;}}
+if(_gen8O)
+{_swi37=_swi33;}
+else
+{_swi37=String("               ");}
+if(( (_bounseInputD22O) || (_bounseInputD29O) || (_bounseInputD28O) || (_bounseInputD27O) ))
+{_swi38=_swi37;}
+else
+{_swi38=((String("Автотест ")) + (_gtv19));}
+En_83392563_1 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_1 = _swi38;
+Stroka_83392563_1 = 1;
+Stolb_83392563_1 = 0;
+
+        if (En_83392563_1 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_1, Stroka_83392563_1);
+        lcd.print((Text1_83392563_1));
+        }
+
+
+
+if(flprog::isTimer(_d18x2x1Tti, 1000)) {
+_d18x2x1Tti = millis(); 
+_tempVariable_float =  _readDS18_ow38(_FLPArray67347937, _FLPArray67347937[8]);
+if (_tempVariable_float < 500) {_d18x2x1O = _tempVariable_float;}
+}_gtv2 = (int((_d18x2x1O)));
+_gtv3 = ((String("t")) + ((String((int((_d18x2x1O))), DEC))) + (String("'C")));
+En_83392563_10 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_83392563_10 = ((String("t")) + ((String((int((_d18x2x1O))), DEC))) + (String("'C")));
+Stroka_83392563_10 = 1;
+Stolb_83392563_10 = 15;
+
+        if (En_83392563_10 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_10, Stroka_83392563_10);
+        lcd.print((Text1_83392563_10));
+        }
+
+
+
+if (_dms3Q0) { if (_trgrt33I) { _trgrt33 = 0;} else {_trgrt33 = 1; _trgrt33I = 1;} } else {_trgrt33 = 0; _trgrt33I = 0;}; 
+ if (_Terminal_219391378) { if (_trgrt34I) { _trgrt34 = 0;} else {_trgrt34 = 1; _trgrt34I = 1;} } else {_trgrt34 = 0; _trgrt34I = 0;}; 
+ if (_Terminal_29610707) { if (_trgrt35I) { _trgrt35 = 0;} else {_trgrt35 = 1; _trgrt35I = 1;} } else {_trgrt35 = 0; _trgrt35I = 0;}; 
+ if (!(_bounseInputD30O)) { if (_trgrt36I) { _trgrt36 = 0;} else {_trgrt36 = 1; _trgrt36I = 1;} } else {_trgrt36 = 0; _trgrt36I = 0;}; 
+ if (_gtv44) { if (_trgrt37I) { _trgrt37 = 0;} else {_trgrt37 = 1; _trgrt37I = 1;} } else {_trgrt37 = 0; _trgrt37I = 0;}; 
+ FTrig_14_Out = 0;
+if ((!(_gen4O))&&(FTrig_14_OldStat)){FTrig_14_Out = 1;}
+FTrig_14_OldStat = _gen4O;
+En_233382538_4 = ( (_dms3Q0) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_dms3Q1)) && (!(_gtv39)) );
+Text1_233382538_4 = ((_RTC1_GetTime2_StrOut) + (String(" ")) + (_mux5));
+Stroka_233382538_4 = 0;
+Stolb_233382538_4 = 0;
+cle_ar_233382538_4 = ( (_trgrt33) || (_trgrt34) || (_trgrt35) || (_trgrt36) || (_trgrt37) || (FTrig_14_Out) );
+
+        if (En_233382538_4) 
+
+        {
+         {
+         if (cle_ar_233382538_4)
+         lcd.clear();
+         }
+        lcd.setCursor(Stolb_233382538_4, Stroka_233382538_4);
+        lcd.print((Text1_233382538_4));
+        }
+
+
+
+
+//Плата:3
+//Наименование:Установка дата/время в часах реального времени
+_Terminal_202317312 = ( (_gtv17) && (_gtv12) );
+ if (( (_gtv17) && (_gtv12) ))
+{ if (!(_RTCST_Ost1))
+{set3231Date(0x68, &_RTC1, -1, ((_menuValueArray_int[14])), ((_menuValueArray_int[11])), ((_menuValueArray_int[8])), ((_menuValueArray_int[5])), (((_menuValueArray_int[1]))-(2000)), ((_menuValueArray_int[3])));
+get3231Date(0x68, &_RTC1);
+_RTCST_Ost1 = 1;
+}}
+ else
+{ _RTCST_Ost1 = 0;}
+
+//Плата:4
+//Наименование:Настройка и управление цепями АО
+if (( (( (_bounseInputD27O) && ((_menuValueArray_bool[7])) )) || (( (_bounseInputD27O) && ((_menuValueArray_bool[1])) )) || (( (_bounseInputD27O) && ((_menuValueArray_bool[4])) )) || (( (_bounseInputD27O) && ((_menuValueArray_bool[0])) )) )) { if (! _gen7I) { _gen7I = 1; _gen7O = 1; _gen7P = millis(); } } else { _gen7I = 0 ; _gen7O= 0;}
+ if (_gen7I) {  if ( flprog::isTimer ( _gen7P , 1000 )) { _gen7P = millis(); _gen7O = ! _gen7O;}}
+if(( (_bounseInputD27O) && ((_menuValueArray_bool[7])) ))
+{_swi45=_gen7O;}
+else
+{_swi45=( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[6])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );}
+digitalWrite(54, _swi45);
+if(( (_bounseInputD27O) && ((_menuValueArray_bool[1])) ))
+{_swi46=_gen7O;}
+else
+{_swi46=( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[9])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );}
+digitalWrite(56, _swi46);
+_gtv7 = ( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[5])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );
+if(( (_bounseInputD27O) && ((_menuValueArray_bool[0])) ))
+{_swi48=_gen7O;}
+else
+{_swi48=( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[5])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );}
+digitalWrite(60, _swi48);
+if(( (_bounseInputD27O) && ((_menuValueArray_bool[4])) ))
+{_swi47=_gen7O;}
+else
+{_swi47=( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[11])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );}
+digitalWrite(58, _swi47);
+_gtv6 = ( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[11])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );
+_gtv5 = ( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[9])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );
+_gtv4 = ( (( (!(!(_bounseInputD30O))) && ((_menuValueArray_bool[6])) )) || (_Terminal_219391378) || (_gtv39) || (_gtv45) );
+digitalWrite(55, ( (!(_gtv4)) && ((_menuValueArray_bool[10])) ));
+digitalWrite(57, ( (!(_gtv5)) && ((_menuValueArray_bool[3])) ));
+digitalWrite(59, ( (!(_gtv6)) && ((_menuValueArray_bool[8])) ));
+digitalWrite(61, ( (!(_gtv7)) && ((_menuValueArray_bool[2])) ));
+
+//Плата:5
+//Наименование:Входные сигналы
+if (( (!(_bounseInputD22O)) && (_bounseInputD23O) ))
+{ if (_tim5I) { if (flprog::isTimer(_tim5P, 1000)) {_tim5O = 1;}} else {_tim5I =1; _tim5P = millis();}} else {_tim5O = 0; _tim5I = 0;}
+
+//Плата:6
+//Наименование:Аварии
+_Terminal_29610707 = ( (!(_gtv45)) && (!(_gtv39)) && (( (_tim5O) || (_tim5O) || (!(_bounseInputD26O)) )) );
+_Terminal_219391378 = ( (!(_gtv45)) && (!(_gtv39)) && (( (_bounseInputD27O) || (_bounseInputD28O) || (_bounseInputD29O) || (_bounseInputD22O) )) );
+
+//Плата:7
+//Наименование:Запись Логов в электронный журнал событий - SD-card
+FTrig_12_Out = 0;
+if ((!(_gtv45))&&(FTrig_12_OldStat)){FTrig_12_Out = 1;}
+FTrig_12_OldStat = _gtv45;
+if((readBooleanFromEEPROM(2, 5, 0x0)))
+{_swi32=String("Error");}
+else
+{_swi32=String("OK");}
+if(FTrig_12_Out)
+{if(! _sd1SVOS25) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= ((String("BAT-Test ")) + (_swi32)); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS25 = 1;}}
+else
+{if( _sd1SVOS25) {_sd1SVOS25 = 0; }}
+if(FTrig_12_Out)
+{if(! _sd1SVOS24) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("BAT-Test stop"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS24 = 1;}}
+else
+{if( _sd1SVOS24) {_sd1SVOS24 = 0; }}
+if (_gtv45) { if (_trgrt28I) { _trgrt28 = 0;} else {_trgrt28 = 1; _trgrt28I = 1;} } else {_trgrt28 = 0; _trgrt28I = 0;}; 
+ if(_trgrt28)
+{if(! _sd1SVOS23) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("BAT-Test start"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS23 = 1;}}
+else
+{if( _sd1SVOS23) {_sd1SVOS23 = 0; }}
+FTrig_3_Out = 0;
+if ((!(_gtv39))&&(FTrig_3_OldStat)){FTrig_3_Out = 1;}
+FTrig_3_OldStat = _gtv39;
+if((readBooleanFromEEPROM(2, 4, 0x0)))
+{_swi27=String("Error");}
+else
+{_swi27=String("OK");}
+if(FTrig_3_Out)
+{if(! _sd1SVOS14) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= ((String("F-Test ")) + (_swi27)); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS14 = 1;}}
+else
+{if( _sd1SVOS14) {_sd1SVOS14 = 0; }}
+if(FTrig_3_Out)
+{if(! _sd1SVOS13) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("F-Test stop"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS13 = 1;}}
+else
+{if( _sd1SVOS13) {_sd1SVOS13 = 0; }}
+if (_gtv39) { if (_trgrt3I) { _trgrt3 = 0;} else {_trgrt3 = 1; _trgrt3I = 1;} } else {_trgrt3 = 0; _trgrt3I = 0;}; 
+ if(_trgrt3)
+{if(! _sd1SVOS12) {
+_sd1TS = "test;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("F-Test start"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS12 = 1;}}
+else
+{if( _sd1SVOS12) {_sd1SVOS12 = 0; }}
+FTrig_1_Out = 0;
+if ((!(!(_bounseInputD30O)))&&(FTrig_1_OldStat)){FTrig_1_Out = 1;}
+FTrig_1_OldStat = !(_bounseInputD30O);
+if(FTrig_1_Out)
+{if(! _sd1SVOS11) {
+_sd1TS = "work;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Circuits ON"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS11 = 1;}}
+else
+{if( _sd1SVOS11) {_sd1SVOS11 = 0; }}
+if (!(_bounseInputD30O)) { if (_trgrt2I) { _trgrt2 = 0;} else {_trgrt2 = 1; _trgrt2I = 1;} } else {_trgrt2 = 0; _trgrt2I = 0;}; 
+ if(_trgrt2)
+{if(! _sd1SVOS10) {
+_sd1TS = "work;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Circuits OFF"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS10 = 1;}}
+else
+{if( _sd1SVOS10) {_sd1SVOS10 = 0; }}
+FTrig_11_Out = 0;
+if ((!(!(_bounseInputD26O)))&&(FTrig_11_OldStat)){FTrig_11_Out = 1;}
+FTrig_11_OldStat = !(_bounseInputD26O);
+if(FTrig_11_Out)
+{if(! _sd1SVOS7) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Battery OK"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS7 = 1;}}
+else
+{if( _sd1SVOS7) {_sd1SVOS7 = 0; }}
+if (!(_bounseInputD26O)) { if (_trgrt16I) { _trgrt16 = 0;} else {_trgrt16 = 1; _trgrt16I = 1;} } else {_trgrt16 = 0; _trgrt16I = 0;}; 
+ if(_trgrt16)
+{if(! _sd1SVOS6) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Battery Error"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS6 = 1;}}
+else
+{if( _sd1SVOS6) {_sd1SVOS6 = 0; }}
+if (_bounseInputD22O) { if (_trgrt12I) { _trgrt12 = 0;} else {_trgrt12 = 1; _trgrt12I = 1;} } else {_trgrt12 = 0; _trgrt12I = 0;}; 
+ FTrig_2_Out = 0;
+if ((!(_bounseInputD25O))&&(FTrig_2_OldStat)){FTrig_2_Out = 1;}
+FTrig_2_OldStat = _bounseInputD25O;
+if(( (!(( (_gtv39) || (_gtv45) ))) && (FTrig_2_Out) ))
+{if(! _sd1SVOS9) {
+_sd1TS = "work;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("electrical 230V operation"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS9 = 1;}}
+else
+{if( _sd1SVOS9) {_sd1SVOS9 = 0; }}
+if (_bounseInputD25O) { if (_trgrt1I) { _trgrt1 = 0;} else {_trgrt1 = 1; _trgrt1I = 1;} } else {_trgrt1 = 0; _trgrt1I = 0;}; 
+ if(( (!(( (_gtv39) || (_gtv45) ))) && (_trgrt1) ))
+{if(! _sd1SVOS8) {
+_sd1TS = "work;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Battery operation"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS8 = 1;}}
+else
+{if( _sd1SVOS8) {_sd1SVOS8 = 0; }}
+FTrig_10_Out = 0;
+if ((!(_tim5O))&&(FTrig_10_OldStat)){FTrig_10_Out = 1;}
+FTrig_10_OldStat = _tim5O;
+if(( (!(( (_gtv39) || (_gtv45) ))) && (FTrig_10_Out) ))
+{if(! _sd1SVOS5) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Charger OK"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS5 = 1;}}
+else
+{if( _sd1SVOS5) {_sd1SVOS5 = 0; }}
+if (_tim5O) { if (_trgrt15I) { _trgrt15 = 0;} else {_trgrt15 = 1; _trgrt15I = 1;} } else {_trgrt15 = 0; _trgrt15I = 0;}; 
+ if(( (!(( (_gtv39) || (_gtv45) ))) && (_trgrt15) ))
+{if(! _sd1SVOS4) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("Charger Error"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS4 = 1;}}
+else
+{if( _sd1SVOS4) {_sd1SVOS4 = 0; }}
+FTrig_9_Out = 0;
+if ((!(_tim5O))&&(FTrig_9_OldStat)){FTrig_9_Out = 1;}
+FTrig_9_OldStat = _tim5O;
+if(( (!(( (_gtv39) || (_gtv45) ))) && (FTrig_9_Out) ))
+{if(! _sd1SVOS3) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("BP24V OK"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS3 = 1;}}
+else
+{if( _sd1SVOS3) {_sd1SVOS3 = 0; }}
+if (_tim5O) { if (_trgrt14I) { _trgrt14 = 0;} else {_trgrt14 = 1; _trgrt14I = 1;} } else {_trgrt14 = 0; _trgrt14I = 0;}; 
+ if(( (!(( (_gtv39) || (_gtv45) ))) && (_trgrt14) ))
+{if(! _sd1SVOS1) {
+_sd1TS = "error;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("BP24V Error"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS1 = 1;}}
+else
+{if( _sd1SVOS1) {_sd1SVOS1 = 0; }}
+FTrig_8_Out = 0;
+if ((!(_bounseInputD22O))&&(FTrig_8_OldStat)){FTrig_8_Out = 1;}
+FTrig_8_OldStat = _bounseInputD22O;
+if(( (FTrig_8_Out) && (!(( (_gtv39) || (_gtv45) ))) ))
+{if(! _sd1SVOS2) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("230V OK"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS2 = 1;}}
+else
+{if( _sd1SVOS2) {_sd1SVOS2 = 0; }}
+if(( (_trgrt12) && (!(( (_gtv39) || (_gtv45) ))) ))
+{if(! _sd1SVOS20) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("230V Error"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS20 = 1;}}
+else
+{if( _sd1SVOS20) {_sd1SVOS20 = 0; }}
+FTrig_7_Out = 0;
+if ((!(_bounseInputD29O))&&(FTrig_7_OldStat)){FTrig_7_Out = 1;}
+FTrig_7_OldStat = _bounseInputD29O;
+if(FTrig_7_Out)
+{if(! _sd1SVOS19) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("stop Push-Alarm"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS19 = 1;}}
+else
+{if( _sd1SVOS19) {_sd1SVOS19 = 0; }}
+if (_bounseInputD29O) { if (_trgrt13I) { _trgrt13 = 0;} else {_trgrt13 = 1; _trgrt13I = 1;} } else {_trgrt13 = 0; _trgrt13I = 0;}; 
+ if(_trgrt13)
+{if(! _sd1SVOS18) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("start Push-Alarm"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS18 = 1;}}
+else
+{if( _sd1SVOS18) {_sd1SVOS18 = 0; }}
+FTrig_6_Out = 0;
+if ((!(_bounseInputD28O))&&(FTrig_6_OldStat)){FTrig_6_Out = 1;}
+FTrig_6_OldStat = _bounseInputD28O;
+if(FTrig_6_Out)
+{if(! _sd1SVOS17) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("stop WL-Alarm"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS17 = 1;}}
+else
+{if( _sd1SVOS17) {_sd1SVOS17 = 0; }}
+if (_bounseInputD28O) { if (_trgrt8I) { _trgrt8 = 0;} else {_trgrt8 = 1; _trgrt8I = 1;} } else {_trgrt8 = 0; _trgrt8I = 0;}; 
+ if(_trgrt8)
+{if(! _sd1SVOS16) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("start WL-Alarm"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS16 = 1;}}
+else
+{if( _sd1SVOS16) {_sd1SVOS16 = 0; }}
+FTrig_13_Out = 0;
+if ((!(_bounseInputD27O))&&(FTrig_13_OldStat)){FTrig_13_Out = 1;}
+FTrig_13_OldStat = _bounseInputD27O;
+if(FTrig_13_Out)
+{if(! _sd1SVOS15) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("stop Fire"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS15 = 1;}}
+else
+{if( _sd1SVOS15) {_sd1SVOS15 = 0; }}
+if (_bounseInputD27O) { if (_trgrt19I) { _trgrt19 = 0;} else {_trgrt19 = 1; _trgrt19I = 1;} } else {_trgrt19 = 0; _trgrt19I = 0;}; 
+ if(_trgrt19)
+{if(! _sd1SVOS22) {
+_sd1TS = "alarm;"; 
+_sd1TS+= "String;";_sd1TS+= ";";
+_sd1TS+= String("start Fire"); 
+_sd1TS+= ";";
+_sd1TS+= ((_gtv48) + (String(";")) + (_gtv3)); 
+_sd1TS+= ";";
+_sd1DF = SD.open("testlog.csv", FILE_WRITE);
+if (_sd1DF) {_sd1DF.println(_sd1TS); _sd1DF.close();}
+_sd1SVOS22 = 1;}}
+else
+{if( _sd1SVOS22) {_sd1SVOS22 = 0; }}
+
+//Плата:8
+//Наименование:LED-индикаторы и Зуммер
+digitalWrite(2, !(_bounseInputD22O));
+digitalWrite(3, !(!(_bounseInputD26O)));
+digitalWrite(4, ( (!(!(_bounseInputD30O))) && (( (!(_tim5O)) || (!(_bounseInputD25O)) )) ));
+digitalWrite(5, _Terminal_29610707);
+if (_bounseInputD27O) { if (! _gen1I) { _gen1I = 1; _gen1O = 1; _gen1P = millis(); } } else { _gen1I = 0 ; _gen1O= 0;}
+ if (_gen1I) {  if ( flprog::isTimer ( _gen1P , 1000 )) { _gen1P = millis(); _gen1O = ! _gen1O;}}
+if(_bounseInputD27O)
+{_swi24=_gen1O;}
+else
+{_swi24=_Terminal_219391378;}
+digitalWrite(6, _swi24);
+digitalWrite(7, !(_bounseInputD25O));
+digitalWrite(8, !(_bounseInputD26O));
+if (!(_bounseInputD30O)) { if (! _gen5I) { _gen5I = 1; _gen5O = 1; _gen5P = millis(); } } else { _gen5I = 0 ; _gen5O= 0;}
+ if (_gen5I) {  if ( flprog::isTimer ( _gen5P , 1000 )) { _gen5P = millis(); _gen5O = ! _gen5O;}}
+digitalWrite(9, _gen5O);
+FTrig_17_Out = 0;
+if ((!(( (_Terminal_219391378) || (_Terminal_29610707) )))&&(FTrig_17_OldStat)){FTrig_17_Out = 1;}
+FTrig_17_OldStat = ( (_Terminal_219391378) || (_Terminal_29610707) );
+if (_gtv44) { if (_trgrt38I) { _trgrt38 = 0;} else {_trgrt38 = 1; _trgrt38I = 1;} } else {_trgrt38 = 0; _trgrt38I = 0;}; 
+ FTrig_15_Out = 0;
+if ((!(_gtv39))&&(FTrig_15_OldStat)){FTrig_15_Out = 1;}
+FTrig_15_OldStat = _gtv39;
+FTrig_16_Out = 0;
+if ((!(_gtv45))&&(FTrig_16_OldStat)){FTrig_16_Out = 1;}
+FTrig_16_OldStat = _gtv45;
+if (( (_Terminal_219391378) || (_Terminal_29610707) )) { if (_trgrt11I) { _trgrt11 = 0;} else {_trgrt11 = 1; _trgrt11I = 1;} } else {_trgrt11 = 0; _trgrt11I = 0;}; 
+ if(_trgrt11) _trgs4 = 1;
+if(( (FTrig_17_Out) || (_trgrt38) || (FTrig_15_Out) || (FTrig_16_Out) )) _trgs4 = 0;
+if(_Terminal_29610707)
+{_swi49=1000;}
+else
+{_swi49=500;}
+if (_trgs4) { if (! _gen9I) { _gen9I = 1; _gen9O = 1; _gen9P = millis(); } } else { _gen9I = 0 ; _gen9O= 0;}
+ if (_gen9I) {  if ( flprog::isTimer ( _gen9P , _swi49 )) { _gen9P = millis(); _gen9O = ! _gen9O;}}
+digitalWrite(11, ( (_gtv12) || (_Terminal_202317312) || (_gtv38) || (_gen9O) ));
+if (( ((readBooleanFromEEPROM(2, 4, 0x0))) || ((readBooleanFromEEPROM(2, 5, 0x0))) )) { if (! _gen6I) { _gen6I = 1; _gen6O = 1; _gen6P = millis(); } } else { _gen6I = 0 ; _gen6O= 0;}
+ if (_gen6I) {  if ( flprog::isTimer ( _gen6P , 1000 )) { _gen6P = millis(); _gen6O = ! _gen6O;}}
+if(( ((readBooleanFromEEPROM(2, 4, 0x0))) || ((readBooleanFromEEPROM(2, 5, 0x0))) ))
+{_swi30=_gen6O;}
+else
+{_swi30=0;}
+if(_gtv39)
+{_swi29=_gtv39;}
+else
+{_swi29=_swi30;}
+digitalWrite(10, _swi29);
+
+//Плата:9
+//Наименование:Настройки кнопок матричной клавиатуры
+UB_142589483_ubi_130480819 = _gtv34;
+UB_142589483_ubi_49975783 = 0;
+_func_UB_142589483(&UB_142589483_Instance3, UB_142589483_ubi_130480819, UB_142589483_ubi_49975783);
+_gtv12 = UB_142589483_Instance3.ubo_723833;
+_gtv11 = UB_142589483_Instance3.ubo_166541688;
+_gtv44 = ( (_gtv20) || (_gtv21) || (_gtv22) || (_gtv23) || (_gtv24) || (_gtv25) || (_gtv26) || (_gtv27) || (_gtv28) || (_gtv29) || (_gtv30) || (_gtv31) || (_gtv32) || (_gtv33) || (_gtv34) || (_gtv35) );
+if(( (_gtv20) || (_gtv21) || (_gtv22) || (_gtv23) || (_gtv24) || (_gtv25) || (_gtv26) || (_gtv27) || (_gtv28) || (_gtv29) || (_gtv30) || (_gtv31) || (_gtv32) || (_gtv33) || (_gtv34) || (_gtv35) )) {_tim3O = 1; _tim3I = 1;} else { if(_tim3I) {_tim3I = 0; _tim3P = millis();} else { if (_tim3O) {if ( flprog::isTimer(_tim3P, 60000)) _tim3O = 0;}}}
+_gtv9 = _tim3O;
+digitalWrite(32, 0);
+_mkb1C1xP1 = ! (digitalRead(36));
+_mkb1C1xP2 = ! (digitalRead(37));
+_mkb1C1xP3 = ! (digitalRead(68));
+_mkb1C1xP4 = ! (digitalRead(69));
+digitalWrite(32, 1);
+digitalWrite(33, 0);
+_mkb1C2xP1 = ! (digitalRead(36));
+_mkb1C2xP2 = ! (digitalRead(37));
+_mkb1C2xP3 = ! (digitalRead(68));
+_mkb1C2xP4 = ! (digitalRead(69));
+digitalWrite(33, 1);
+digitalWrite(34, 0);
+_mkb1C3xP1 = ! (digitalRead(36));
+_mkb1C3xP2 = ! (digitalRead(37));
+_mkb1C3xP3 = ! (digitalRead(68));
+_mkb1C3xP4 = ! (digitalRead(69));
+digitalWrite(34, 1);
+digitalWrite(35, 0);
+_mkb1C4xP1 = ! (digitalRead(36));
+_mkb1C4xP2 = ! (digitalRead(37));
+_mkb1C4xP3 = ! (digitalRead(68));
+_mkb1C4xP4 = ! (digitalRead(69));
+digitalWrite(35, 1);
+_gtv35 = _mkb1C4xP4;
+_gtv34 = _mkb1C4xP3;
+_gtv33 = _mkb1C4xP2;
+_gtv32 = _mkb1C4xP1;
+_gtv31 = _mkb1C3xP4;
+_gtv30 = _mkb1C3xP3;
+_gtv29 = _mkb1C3xP2;
+_gtv28 = _mkb1C3xP1;
+_gtv27 = _mkb1C2xP4;
+_gtv26 = _mkb1C2xP3;
+_gtv25 = _mkb1C2xP2;
+_gtv24 = _mkb1C2xP1;
+_gtv23 = _mkb1C1xP4;
+_gtv22 = _mkb1C1xP3;
+_gtv21 = _mkb1C1xP2;
+_gtv20 = _mkb1C1xP1;
+UB_142589483_ubi_130480819 = _gtv32;
+UB_142589483_ubi_49975783 = 0;
+_func_UB_142589483(&UB_142589483_Instance1, UB_142589483_ubi_130480819, UB_142589483_ubi_49975783);
+_gtv38 = UB_142589483_Instance1.ubo_723833;
+_gtv37 = UB_142589483_Instance1.ubo_166541688;
+if(_gtv20)
+{_swi25=1;}
+else
+{_swi25=0;}
+if (!(_gtv9)) { if (_trgrt4I) { _trgrt4 = 0;} else {_trgrt4 = 1; _trgrt4I = 1;} } else {_trgrt4 = 0; _trgrt4I = 0;}; 
+ if (_gtv41) { if (_trgrt17I) { _trgrt17 = 0;} else {_trgrt17 = 1; _trgrt17I = 1;} } else {_trgrt17 = 0; _trgrt17I = 0;}; 
+ if (( (_gtv10) || (_trgrt4) || (_trgrt17) )){_count2_Value = 0;} else {
+if (( (_gtv23) && (!(_gtv8)) )){
+if ( ! _count2I) { 
+_count2I = 1;
+_count2_Value = _count2_Value + 1;
+}} else {
+_count2I = 0;}
+if (( (!(_gtv8)) && (( (_gtv13) && (_gtv27) )) )){
+if ( ! _count2_SCST) { 
+_count2_SCST = 1;
+_count2_Value = _count2_Value - 1;
+}} else {
+_count2_SCST = 0;}
+}
+if(_count2_Value >= 5) {_count2_Value = 0;} 
+ else { 
+if(_count2_Value <= -1) {_count2_Value = 4;} 
+}
+if((_count2_Value == 0)){_dms3Q0 = 1;}else {_dms3Q0 = 0;}
+if((_count2_Value == 1)){_dms3Q1 = 1;}else {_dms3Q1 = 0;}
+if((_count2_Value == 2)){_dms3Q2 = 1;}else {_dms3Q2 = 0;}
+if((_count2_Value == 3)){_dms3Q3 = 1;}else {_dms3Q3 = 0;}
+if((_count2_Value == 4)){_dms3Q4 = 1;}else {_dms3Q4 = 0;}
+if(_gtv13)
+{_swi15=1;}
+else
+{_swi15=0;}
+if((_swi15 == 0)){_dms4Q0 = _dms3Q2;}else {_dms4Q0 = 0;}
+if((_swi15 == 1)){_dms4Q1 = _dms3Q2;}else {_dms4Q1 = 0;}
+_gtv41 = _dms4Q0;
+if(_gtv30)
+{_swi13=9;}
+else
+{_swi13=0;}
+bool   _bounceTmpD7 = ( (_dms3Q1) && (_gtv30) );
+
+if (_bounse7S) 
+    {
+     if (millis() >= (_bounse7P + 40)) 
+         {_bounse7O=  _bounceTmpD7; _bounse7S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD7 != _bounse7O )
+         {_bounse7S=1; _bounse7P = millis();} 
+      } 
+if (_bounse7O){if(!_SFLPAS7){_SFLPAS7 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi13;}}  else {_SFLPAS7 = 0;}  
+if(_gtv26)
+{_swi10=6;}
+else
+{_swi10=0;}
+bool   _bounceTmpD4 = ( (_dms3Q1) && (_gtv26) );
+
+if (_bounse4S) 
+    {
+     if (millis() >= (_bounse4P + 40)) 
+         {_bounse4O=  _bounceTmpD4; _bounse4S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD4 != _bounse4O )
+         {_bounse4S=1; _bounse4P = millis();} 
+      } 
+if (_bounse4O){if(!_SFLPAS4){_SFLPAS4 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi10;}}  else {_SFLPAS4 = 0;}  
+if(_gtv22)
+{_swi5=3;}
+else
+{_swi5=0;}
+bool   _bounceTmpD1 = ( (_dms3Q1) && (_gtv22) );
+
+if (_bounse1S) 
+    {
+     if (millis() >= (_bounse1P + 40)) 
+         {_bounse1O=  _bounceTmpD1; _bounse1S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD1 != _bounse1O )
+         {_bounse1S=1; _bounse1P = millis();} 
+      } 
+if (_bounse1O){if(!_SFLPAS1){_SFLPAS1 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi5;}}  else {_SFLPAS1 = 0;}  
+if(_gtv29)
+{_swi12=8;}
+else
+{_swi12=0;}
+bool   _bounceTmpD6 = ( (_dms3Q1) && (_gtv29) );
+
+if (_bounse6S) 
+    {
+     if (millis() >= (_bounse6P + 40)) 
+         {_bounse6O=  _bounceTmpD6; _bounse6S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD6 != _bounse6O )
+         {_bounse6S=1; _bounse6P = millis();} 
+      } 
+if (_bounse6O){if(!_SFLPAS6){_SFLPAS6 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi12;}}  else {_SFLPAS6 = 0;}  
+if(_gtv25)
+{_swi9=5;}
+else
+{_swi9=0;}
+bool   _bounceTmpD3 = ( (_dms3Q1) && (_gtv25) );
+
+if (_bounse3S) 
+    {
+     if (millis() >= (_bounse3P + 40)) 
+         {_bounse3O=  _bounceTmpD3; _bounse3S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD3 != _bounse3O )
+         {_bounse3S=1; _bounse3P = millis();} 
+      } 
+if (_bounse3O){if(!_SFLPAS3){_SFLPAS3 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi9;}}  else {_SFLPAS3 = 0;}  
+if(_gtv21)
+{_swi4=2;}
+else
+{_swi4=0;}
+bool   _bounceTmpD11 = ( (_dms3Q1) && (_gtv21) );
+
+if (_bounse11S) 
+    {
+     if (millis() >= (_bounse11P + 40)) 
+         {_bounse11O=  _bounceTmpD11; _bounse11S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD11 != _bounse11O )
+         {_bounse11S=1; _bounse11P = millis();} 
+      } 
+if (_bounse11O){if(!_SFLPAS11){_SFLPAS11 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi4;}}  else {_SFLPAS11 = 0;}  
+if(_gtv33)
+{_swi14=0;}
+else
+{_swi14=0;}
+bool   _bounceTmpD8 = ( (_dms3Q1) && (_gtv33) );
+
+if (_bounse8S) 
+    {
+     if (millis() >= (_bounse8P + 40)) 
+         {_bounse8O=  _bounceTmpD8; _bounse8S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD8 != _bounse8O )
+         {_bounse8S=1; _bounse8P = millis();} 
+      } 
+if (_bounse8O){if(!_SFLPAS8){_SFLPAS8 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi14;}}  else {_SFLPAS8 = 0;}  
+if(_gtv28)
+{_swi11=7;}
+else
+{_swi11=0;}
+bool   _bounceTmpD5 = ( (_dms3Q1) && (_gtv28) );
+
+if (_bounse5S) 
+    {
+     if (millis() >= (_bounse5P + 40)) 
+         {_bounse5O=  _bounceTmpD5; _bounse5S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD5 != _bounse5O )
+         {_bounse5S=1; _bounse5P = millis();} 
+      } 
+if (_bounse5O){if(!_SFLPAS5){_SFLPAS5 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi11;}}  else {_SFLPAS5 = 0;}  
+if(_gtv24)
+{_swi8=4;}
+else
+{_swi8=0;}
+bool   _bounceTmpD2 = ( (_dms3Q1) && (_gtv24) );
+
+if (_bounse2S) 
+    {
+     if (millis() >= (_bounse2P + 40)) 
+         {_bounse2O=  _bounceTmpD2; _bounse2S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD2 != _bounse2O )
+         {_bounse2S=1; _bounse2P = millis();} 
+      } 
+if (_bounse2O){if(!_SFLPAS2){_SFLPAS2 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi8;}}  else {_SFLPAS2 = 0;}  
+bool   _bounceTmpD10 = ( (_dms3Q1) && (_gtv20) );
+
+if (_bounse10S) 
+    {
+     if (millis() >= (_bounse10P + 40)) 
+         {_bounse10O=  _bounceTmpD10; _bounse10S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD10 != _bounse10O )
+         {_bounse10S=1; _bounse10P = millis();} 
+      } 
+if (_bounse10O){if(!_SFLPAS10){_SFLPAS10 =  1;  for(_tempVariable_int = 0; _tempVariable_int < 3; _tempVariable_int = _tempVariable_int +1 ){_FLPArray191651832[_tempVariable_int ] = _FLPArray191651832[_tempVariable_int + 1];}  _FLPArray191651832[3] =_swi25;}}  else {_SFLPAS10 = 0;}  
+
+//Плата:10
+//Наименование:page2 - ввод пароля
+En_83392563_24 = ( (!(_dms3Q0)) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (_dms3Q1) && (!(_gtv39)) );
+Text1_83392563_24 = String("Пароль");
+Stroka_83392563_24 = 0;
+Stolb_83392563_24 = 6;
+
+        if (En_83392563_24 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_24, Stroka_83392563_24);
+        lcd.print((Text1_83392563_24));
+        }
+
+
+
+_gtv15 = (String((_FLPArray191651832[0]), DEC));
+_gtv36 = (String((_FLPArray191651832[1]), DEC));
+_gtv16 = (String((_FLPArray191651832[2]), DEC));
+_gtv14 = (String((_FLPArray191651832[3]), DEC));
+if (( (((_menuValueArray_int[9])) == ((_FLPArray191651832[0]))) && (((_menuValueArray_int[13])) == ((_FLPArray191651832[1]))) && (((_menuValueArray_int[15])) == ((_FLPArray191651832[2]))) && (((_menuValueArray_int[7])) == ((_FLPArray191651832[3]))) )) { if (_trgrt26I) { _trgrt26 = 0;} else {_trgrt26 = 1; _trgrt26I = 1;} } else {_trgrt26 = 0; _trgrt26I = 0;}; 
+ if (!(_gtv9)) { if (_trgrt7I) { _trgrt7 = 0;} else {_trgrt7 = 1; _trgrt7I = 1;} } else {_trgrt7 = 0; _trgrt7I = 0;}; 
+ if(_trgrt7){if(!_SETFA2){_FLPArray191651832[3] = 0; _SETFA2 = 1;}} else {_SETFA2 = 0;}
+if(_trgrt7){if(!_SETFA1){_FLPArray191651832[2] = 0; _SETFA1 = 1;}} else {_SETFA1 = 0;}
+if(_trgrt7){if(!_SETFA5){_FLPArray191651832[1] = 0; _SETFA5 = 1;}} else {_SETFA5 = 0;}
+if(_trgrt7){if(!_SETFA4){_FLPArray191651832[0] = 0; _SETFA4 = 1;}} else {_SETFA4 = 0;}
+if(_trgrt26) _trgs1 = 1;
+if(_trgrt7) _trgs1 = 0;
+if (_trgs1)
+{ if (_tim4I) { if (flprog::isTimer(_tim4P, 500)) {_tim4O = 1;}} else {_tim4I =1; _tim4P = millis();}} else {_tim4O = 0; _tim4I = 0;}
+_gtv13 = _tim4O;
+if(_trgs1)
+{_swi16=String("Пароль OK");}
+else
+{_swi16=String("  Ошибка");}
+En_83392563_27 = ( (( (!(_dms3Q0)) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (_dms3Q1) && (!(_gtv39)) )) && (_gtv13) );
+Text1_83392563_27 = _swi16;
+Stroka_83392563_27 = 3;
+Stolb_83392563_27 = 5;
+
+        if (En_83392563_27 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_27, Stroka_83392563_27);
+        lcd.print((Text1_83392563_27));
+        }
+
+
+
+En_83392563_26 = ( (( (!(_dms3Q0)) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (_dms3Q1) && (!(_gtv39)) )) && (!(_gtv13)) );
+Text1_83392563_26 = ((_gtv15) + (_gtv36) + (_gtv16) + (_gtv14));
+Stroka_83392563_26 = 2;
+Stolb_83392563_26 = 8;
+
+        if (En_83392563_26 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_26, Stroka_83392563_26);
+        lcd.print((Text1_83392563_26));
+        }
+
+
+
+En_83392563_25 = ( (( (!(_dms3Q0)) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (_dms3Q1) && (!(_gtv39)) )) && (!(_gtv13)) );
+Text1_83392563_25 = String("Ввести пароль:");
+Stroka_83392563_25 = 1;
+Stolb_83392563_25 = 3;
+
+        if (En_83392563_25 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_25, Stroka_83392563_25);
+        lcd.print((Text1_83392563_25));
+        }
+
+
+
+if (( (!(_dms3Q0)) && (!(_dms4Q1)) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (_dms3Q1) && (!(_gtv39)) )) { if (_trgrt20I) { _trgrt20 = 0;} else {_trgrt20 = 1; _trgrt20I = 1;} } else {_trgrt20 = 0; _trgrt20I = 0;}; 
+ En_83392563_23 = _trgrt20;
+Text1_83392563_23 = String("                    ");
+Stroka_83392563_23 = 3;
+Stolb_83392563_23 = 0;
+
+        if (En_83392563_23 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_23, Stroka_83392563_23);
+        lcd.print((Text1_83392563_23));
+        }
+
+
+
+En_83392563_22 = _trgrt20;
+Text1_83392563_22 = String("                    ");
+Stroka_83392563_22 = 2;
+Stolb_83392563_22 = 0;
+
+        if (En_83392563_22 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_22, Stroka_83392563_22);
+        lcd.print((Text1_83392563_22));
+        }
+
+
+
+En_83392563_21 = _trgrt20;
+Text1_83392563_21 = String("                    ");
+Stroka_83392563_21 = 1;
+Stolb_83392563_21 = 0;
+
+        if (En_83392563_21 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_21, Stroka_83392563_21);
+        lcd.print((Text1_83392563_21));
+        }
+
+
+
+En_83392563_20 = _trgrt20;
+Text1_83392563_20 = String("                    ");
+Stroka_83392563_20 = 0;
+Stolb_83392563_20 = 0;
+
+        if (En_83392563_20 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_20, Stroka_83392563_20);
+        lcd.print((Text1_83392563_20));
+        }
+
+
+
+
+//Плата:11
+//Наименование:page3 - страница функционального теста
+if(((_menuValueArray_int[19])) == 0) {_mux4 = String("Вс");}
+if(((_menuValueArray_int[19])) == 1) {_mux4 = String("Пн");}
+if(((_menuValueArray_int[19])) == 2) {_mux4 = String("Вт");}
+if(((_menuValueArray_int[19])) == 3) {_mux4 = String("Ср");}
+if(((_menuValueArray_int[19])) == 4) {_mux4 = String("Чт");}
+if(((_menuValueArray_int[19])) == 5) {_mux4 = String("Пт");}
+if(((_menuValueArray_int[19])) == 6) {_mux4 = String("Сб");}
+if(((_menuValueArray_int[19])) == 7) {_mux4 = String("Вс");}
+if(((_menuValueArray_int[2])) > (0))
+{_swi18=String("вкл");}
+else
+{_swi18=String("выкл");}
+_gtv19 = _swi18;
+if(((_menuValueArray_int[2])) == 0) {_mux3 = _swi18;}
+if(((_menuValueArray_int[2])) == 1) {_mux3 = String(" неделя ");}
+if(((_menuValueArray_int[2])) == 2) {_mux3 = String(" месяц ");}
+if(((_menuValueArray_int[2])) == 0) {_mux1 = String("");}
+if(((_menuValueArray_int[2])) == 1) {_mux1 = _mux4;}
+if(((_menuValueArray_int[2])) == 2) {_mux1 = (String((_menuValueArray_int[17]), DEC));}
+if (_gtv39) { if (_trgrt23I) { _trgrt23 = 0;} else {_trgrt23 = 1; _trgrt23I = 1;} } else {_trgrt23 = 0; _trgrt23I = 0;}; 
+ if (( (!(_dms3Q0)) && (_dms4Q1) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv39)) )) { if (_trgrt21I) { _trgrt21 = 0;} else {_trgrt21 = 1; _trgrt21I = 1;} } else {_trgrt21 = 0; _trgrt21I = 0;}; 
+ En_233382538_5 = ( (!(_dms3Q0)) && (_dms4Q1) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv39)) );
+Text1_233382538_5 = String("Функциональный тест");
+Stroka_233382538_5 = 0;
+Stolb_233382538_5 = 0;
+cle_ar_233382538_5 = ( (_trgrt21) || (_trgrt23) );
+
+        if (En_233382538_5) 
+
+        {
+         {
+         if (cle_ar_233382538_5)
+         lcd.clear();
+         }
+        lcd.setCursor(Stolb_233382538_5, Stroka_233382538_5);
+        lcd.print((Text1_233382538_5));
+        }
+
+
+
+if(((_menuValueArray_int[2]) == 0)){_dms2Q0 = 1;}else {_dms2Q0 = 0;}
+if(((_menuValueArray_int[2]) == 1)){_dms2Q1 = 1;}else {_dms2Q1 = 0;}
+if(((_menuValueArray_int[2]) == 2)){_dms2Q2 = 1;}else {_dms2Q2 = 0;}
+ if (_dms2Q2)
+{ 
+get3231Date(0x68, &_RTC1);
+_RTCAlO3 = 1;
+if (_RTC1.day != ((_menuValueArray_int[17]))) { _RTCAlO3 = 0;}
+if (_RTC1.Hours != ((_menuValueArray_int[0]))) { _RTCAlO3 = 0;}
+if (_RTC1.minutes != ((_menuValueArray_int[4]))) { _RTCAlO3 = 0;}
+if (_RTC1.seconds != 0) { _RTCAlO3 = 0;}
+ } else {_RTCAlO3 = 0;}
+ if (_dms2Q1)
+{ 
+get3231Date(0x68, &_RTC1);
+_RTCAlO2 = 1;
+if (_RTC1.weekday != ((_menuValueArray_int[19]))) { _RTCAlO2 = 0;}
+if (_RTC1.Hours != ((_menuValueArray_int[0]))) { _RTCAlO2 = 0;}
+if (_RTC1.minutes != ((_menuValueArray_int[4]))) { _RTCAlO2 = 0;}
+if (_RTC1.seconds != 0) { _RTCAlO2 = 0;}
+ } else {_RTCAlO2 = 0;}
+if (( (( (_dms4Q1) && (_gtv12) && (!(_gtv39)) )) || (( (_RTCAlO2) || (_RTCAlO3) )) )) { if (_trgrt22I) { _trgrt22 = 0;} else {_trgrt22 = 1; _trgrt22I = 1;} } else {_trgrt22 = 0; _trgrt22I = 0;}; 
+ if (( (_dms4Q1) && (_gtv39) && (_gtv38) )) { if (_trgrt5I) { _trgrt5 = 0;} else {_trgrt5 = 1; _trgrt5I = 1;} } else {_trgrt5 = 0; _trgrt5I = 0;}; 
+ if (_gtv18) { if (_trgrt39I) { _trgrt39 = 0;} else {_trgrt39 = 1; _trgrt39I = 1;} } else {_trgrt39 = 0; _trgrt39I = 0;}; 
+ if (_gtv42) { if (_trgrt40I) { _trgrt40 = 0;} else {_trgrt40 = 1; _trgrt40I = 1;} } else {_trgrt40 = 0; _trgrt40I = 0;}; 
+ if(( (_gtv40) || (_trgrt5) || (_trgrt39) || (_trgrt40) )) _trgr1 = 0;
+if(_trgrt22) _trgr1 = 1;
+bool   _bounceTmpD13 = _trgr1;
+
+if (_bounse13S) 
+    {
+     if (millis() >= (_bounse13P + 40)) 
+         {_bounse13O=  _bounceTmpD13; _bounse13S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD13 != _bounse13O )
+         {_bounse13S=1; _bounse13P = millis();} 
+      } 
+FTrig_4_Out = 0;
+if ((!(_bounse13O))&&(FTrig_4_OldStat)){FTrig_4_Out = 1;}
+FTrig_4_OldStat = _bounse13O;
+_gtv43 = FTrig_4_Out;
+if(_trgr1) {_tim1O = 1; _tim1I = 1;} else { if(_tim1I) {_tim1I = 0; _tim1P = millis();} else { if (_tim1O) {if ( flprog::isTimer(_tim1P, 2000)) _tim1O = 0;}}}
+if (_trgr1) { if (! _gen3I) { _gen3I = 1; _gen3O = 1; _gen3P = millis(); } } else { _gen3I = 0 ; _gen3O= 0;}
+ if (_gen3I) {  if ( flprog::isTimer ( _gen3P , 500 )) { _gen3P = millis(); _gen3O = ! _gen3O;}}
+if (_trgrt22){
+_count3_Value = (_menuValueArray_int[16]);
+} else {
+if (_gen3O){
+if ( ! _count3I) { 
+_count3I = 1;
+if(_count3_Value > 0) {_count3_Value = _count3_Value - 1;
+}}} else {
+_count3I = 0;}
+}
+_count3MinLO = _count3_Value <= 0; 
+if(_trgr1)
+{_swi19=_count3_Value;}
+else
+{_swi19=(_menuValueArray_int[16]);}
+En_83392563_39 = _tim1O;
+Text1_83392563_39 = ((String("через ")) + ((String(_swi19, DEC))) + (String(" сек.")));
+Stroka_83392563_39 = 3;
+Stolb_83392563_39 = 3;
+
+        if (En_83392563_39 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_39, Stroka_83392563_39);
+        lcd.print((Text1_83392563_39));
+        }
+
+
+
+En_83392563_38 = _tim1O;
+Text1_83392563_38 = String("завершение теста");
+Stroka_83392563_38 = 2;
+Stolb_83392563_38 = 2;
+
+        if (En_83392563_38 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_38, Stroka_83392563_38);
+        lcd.print((Text1_83392563_38));
+        }
+
+
+
+En_83392563_37 = _tim1O;
+Text1_83392563_37 = String("Работа от АКБ");
+Stroka_83392563_37 = 1;
+Stolb_83392563_37 = 3;
+
+        if (En_83392563_37 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_37, Stroka_83392563_37);
+        lcd.print((Text1_83392563_37));
+        }
+
+
+
+En_83392563_36 = _tim1O;
+Text1_83392563_36 = String("Ф-тест включен");
+Stroka_83392563_36 = 0;
+Stolb_83392563_36 = 3;
+
+        if (En_83392563_36 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_36, Stroka_83392563_36);
+        lcd.print((Text1_83392563_36));
+        }
+
+
+
+_gtv39 = _tim1O;
+_gtv40 = _count3MinLO;
+En_83392563_35 = ( (!(_dms3Q0)) && (_dms4Q1) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv39)) );
+Text1_83392563_35 = ((String("длительность ")) + ((String((_menuValueArray_int[16]), DEC))) + (String(" сек.")));
+Stroka_83392563_35 = 3;
+Stolb_83392563_35 = 0;
+
+        if (En_83392563_35 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_35, Stroka_83392563_35);
+        lcd.print((Text1_83392563_35));
+        }
+
+
+
+En_83392563_34 = ( (!(_dms3Q0)) && (_dms4Q1) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv39)) );
+Text1_83392563_34 = ((String("старт теста в ")) + ((_convertNumbeToTime((_menuValueArray_int[0])))) + (String(":")) + ((_convertNumbeToTime((_menuValueArray_int[4])))));
+Stroka_83392563_34 = 2;
+Stolb_83392563_34 = 0;
+
+        if (En_83392563_34 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_34, Stroka_83392563_34);
+        lcd.print((Text1_83392563_34));
+        }
+
+
+
+En_83392563_33 = ( (!(_dms3Q0)) && (_dms4Q1) && (!(_dms3Q3)) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv39)) );
+Text1_83392563_33 = ((String("Автотест ")) + (_mux3) + (_mux1));
+Stroka_83392563_33 = 1;
+Stolb_83392563_33 = 0;
+
+        if (En_83392563_33 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_33, Stroka_83392563_33);
+        lcd.print((Text1_83392563_33));
+        }
+
+
+
+
+//Плата:12
+//Наименование:page4 - страница теста АКБ
+En_83392563_47 = ( (!(_dms3Q0)) && (!(_dms4Q1)) && (_dms3Q3) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_gtv39)) );
+Text1_83392563_47 = ((String("следующий тест: ")) + (String("")));
+Stroka_83392563_47 = 3;
+Stolb_83392563_47 = 0;
+
+        if (En_83392563_47 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_47, Stroka_83392563_47);
+        lcd.print((Text1_83392563_47));
+        }
+
+
+
+En_83392563_46 = ( (!(_dms3Q0)) && (!(_dms4Q1)) && (_dms3Q3) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_gtv39)) );
+Text1_83392563_46 = ((String("предыдущий тест: ")) + (String("")));
+Stroka_83392563_46 = 2;
+Stolb_83392563_46 = 0;
+
+        if (En_83392563_46 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_46, Stroka_83392563_46);
+        lcd.print((Text1_83392563_46));
+        }
+
+
+
+En_83392563_44 = ( (!(_dms3Q0)) && (!(_dms4Q1)) && (_dms3Q3) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_gtv39)) );
+Text1_83392563_44 = String("Тест работы от АКБ");
+Stroka_83392563_44 = 0;
+Stolb_83392563_44 = 1;
+
+        if (En_83392563_44 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_44, Stroka_83392563_44);
+        lcd.print((Text1_83392563_44));
+        }
+
+
+
+if (( (!(_dms3Q0)) && (!(_dms4Q1)) && (_dms3Q3) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_gtv39)) )) { if (_trgrt24I) { _trgrt24 = 0;} else {_trgrt24 = 1; _trgrt24I = 1;} } else {_trgrt24 = 0; _trgrt24I = 0;}; 
+ En_83392563_43 = _trgrt24;
+Text1_83392563_43 = String("                    ");
+Stroka_83392563_43 = 3;
+Stolb_83392563_43 = 0;
+
+        if (En_83392563_43 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_43, Stroka_83392563_43);
+        lcd.print((Text1_83392563_43));
+        }
+
+
+
+En_83392563_42 = _trgrt24;
+Text1_83392563_42 = String("                    ");
+Stroka_83392563_42 = 2;
+Stolb_83392563_42 = 0;
+
+        if (En_83392563_42 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_42, Stroka_83392563_42);
+        lcd.print((Text1_83392563_42));
+        }
+
+
+
+En_83392563_41 = _trgrt24;
+Text1_83392563_41 = String("                    ");
+Stroka_83392563_41 = 1;
+Stolb_83392563_41 = 0;
+
+        if (En_83392563_41 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_41, Stroka_83392563_41);
+        lcd.print((Text1_83392563_41));
+        }
+
+
+
+En_83392563_40 = _trgrt24;
+Text1_83392563_40 = String("                    ");
+Stroka_83392563_40 = 0;
+Stolb_83392563_40 = 0;
+
+        if (En_83392563_40 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_40, Stroka_83392563_40);
+        lcd.print((Text1_83392563_40));
+        }
+
+
+
+En_83392563_45 = ( (!(_dms3Q0)) && (!(_dms4Q1)) && (_dms3Q3) && (!(_dms3Q4)) && (!(_gen4O)) && (!(_gtv8)) && (!(_gtv39)) );
+Text1_83392563_45 = ((String("длительность ")) + ((String((_menuValueArray_int[20]), DEC))) + (String(" мин")));
+Stroka_83392563_45 = 1;
+Stolb_83392563_45 = 0;
+
+        if (En_83392563_45 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_45, Stroka_83392563_45);
+        lcd.print((Text1_83392563_45));
+        }
+
+
+
+
+//Плата:13
+//Наименование:Блок меню
+if (( (( (_dms3Q4) && (_gtv13) )) && (( (_gtv12) && (!(_gtv8)) )) )) { if (_trgrt6I) { _trgrt6 = 0;} else {_trgrt6 = 1; _trgrt6I = 1;} } else {_trgrt6 = 0; _trgrt6I = 0;}; 
+ if (( (_gtv8) && (( (!(_gtv9)) || (_gtv38) )) )) { if (_trgrt25I) { _trgrt25 = 0;} else {_trgrt25 = 1; _trgrt25I = 1;} } else {_trgrt25 = 0; _trgrt25I = 0;}; 
+ _gtv10 = _trgrt25;
+if(_trgrt6) _trgs3 = 1;
+if(_trgrt25) _trgs3 = 0;
+if (( (_dms3Q4) && (!(_trgs3)) )) { if (_trgrt29I) { _trgrt29 = 0;} else {_trgrt29 = 1; _trgrt29I = 1;} } else {_trgrt29 = 0; _trgrt29I = 0;}; 
+ En_233382538_2 = ( (_dms3Q4) && (!(_trgs3)) );
+Text1_233382538_2 = String("Настройки");
+Stroka_233382538_2 = 0;
+Stolb_233382538_2 = 5;
+cle_ar_233382538_2 = _trgrt29;
+
+        if (En_233382538_2) 
+
+        {
+         {
+         if (cle_ar_233382538_2)
+         lcd.clear();
+         }
+        lcd.setCursor(Stolb_233382538_2, Stroka_233382538_2);
+        lcd.print((Text1_233382538_2));
+        }
+
+
+
+_gtv8 = _trgs3;
+ if (_trgs3) {
+_tempVariable_bool  =  1;
+ if ( ! _MenuBlock_98070487_OEIS ) {_MenuBlock_98070487_OEIS = 1;
+ _MainMenus[0].currentItem = _MenuItems[0]; 
+(_MainMenus[0]).tempString = "";
+} 
+_tempVariable_int = pgm_read_byte(&_menuParametrsArray[((_MainMenus[0].currentItem ).startInArrayIndex)+10]);
+_MenuBlock_98070487_MNO = _readStringFromProgmem ((char*)pgm_read_word(&(_flprogMenuStringsArray[_tempVariable_int - 1])));
+_MenuBlock_98070487_VNO = _menuOutputValueString (0);
+_MenuBlock_98070487_AMO_110573979 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 15; 
+_MenuBlock_98070487_AMO_174410340 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 16; 
+_MenuBlock_98070487_AMO_152766230 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 17; 
+_MenuBlock_98070487_AMO_1374227 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 18; 
+_MenuBlock_98070487_AMO_78395074 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 23; 
+_MenuBlock_98070487_AMO_140792278 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 24; 
+_MenuBlock_98070487_AMO_243644557 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 25; 
+_MenuBlock_98070487_AMO_94042602 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 26; 
+_MenuBlock_98070487_AMO_188655611 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 31; 
+_MenuBlock_98070487_AMO_214942154 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 32; 
+_MenuBlock_98070487_AMO_54351946 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 33; 
+_MenuBlock_98070487_AMO_82053453 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 34; 
+_MenuBlock_98070487_AMO_174116671 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 35; 
+_MenuBlock_98070487_AMO_149198026 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 39; 
+_MenuBlock_98070487_AMO_231464087 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 44; 
+_MenuBlock_98070487_AMO_14990655 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 45; 
+_MenuBlock_98070487_AMO_2142001 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 46; 
+_MenuBlock_98070487_AMO_140906228 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 47; 
+_MenuBlock_98070487_AMO_74286321 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 48; 
+_MenuBlock_98070487_AMO_172078273 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 50; 
+_MenuBlock_98070487_AMO_11020172 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 54; 
+_MenuBlock_98070487_AMO_83097424 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 55; 
+_MenuBlock_98070487_AMO_8595930 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 56; 
+_MenuBlock_98070487_AMO_126820076 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 63; 
+_MenuBlock_98070487_AMO_91568022 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 64; 
+_MenuBlock_98070487_AMO_13225397 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 65; 
+_MenuBlock_98070487_AMO_114896351 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 66; 
+_MenuBlock_98070487_AMO_96852826 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 67; 
+_MenuBlock_98070487_AMO_135006846 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 68; 
+_MenuBlock_98070487_AMO_259145164 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 73; 
+_MenuBlock_98070487_AMO_258608421 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 74; 
+_MenuBlock_98070487_AMO_260763075 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 75; 
+_MenuBlock_98070487_AMO_231405590 = pgm_read_byte(&_menuParametrsArray[(_MainMenus[0].currentItem ).startInArrayIndex]) == 76; 
+_tempVariable_int  =  pgm_read_byte(&_menuParametrsArray[(((_MainMenus[0]).currentItem).startInArrayIndex) +12]);
+ if(_tempVariable_int == 0 ) {_MenuBlock_98070487_ASO_1 =  "";} else {_MenuBlock_98070487_ASO_1 =  _readStringFromProgmem ((char*)pgm_read_word(&(_flprogMenuStringsArray[_tempVariable_int - 1])));} 
+_tempVariable_int  =  pgm_read_byte(&_menuParametrsArray[(((_MainMenus[0]).currentItem).startInArrayIndex) +13]);
+ if(_tempVariable_int == 0 ) {_MenuBlock_98070487_ASO_2 =  "";} else {_MenuBlock_98070487_ASO_2 =  _readStringFromProgmem ((char*)pgm_read_word(&(_flprogMenuStringsArray[_tempVariable_int - 1])));} 
+} else {
+_tempVariable_bool  =  0;
+if (_MenuBlock_98070487_OEIS){
+_MenuBlock_98070487_OEIS = 0;
+}
+_MenuBlock_98070487_AMO_110573979 = 0;
+_MenuBlock_98070487_AMO_174410340 = 0;
+_MenuBlock_98070487_AMO_152766230 = 0;
+_MenuBlock_98070487_AMO_1374227 = 0;
+_MenuBlock_98070487_AMO_78395074 = 0;
+_MenuBlock_98070487_AMO_140792278 = 0;
+_MenuBlock_98070487_AMO_243644557 = 0;
+_MenuBlock_98070487_AMO_94042602 = 0;
+_MenuBlock_98070487_AMO_188655611 = 0;
+_MenuBlock_98070487_AMO_214942154 = 0;
+_MenuBlock_98070487_AMO_54351946 = 0;
+_MenuBlock_98070487_AMO_82053453 = 0;
+_MenuBlock_98070487_AMO_174116671 = 0;
+_MenuBlock_98070487_AMO_149198026 = 0;
+_MenuBlock_98070487_AMO_231464087 = 0;
+_MenuBlock_98070487_AMO_14990655 = 0;
+_MenuBlock_98070487_AMO_2142001 = 0;
+_MenuBlock_98070487_AMO_140906228 = 0;
+_MenuBlock_98070487_AMO_74286321 = 0;
+_MenuBlock_98070487_AMO_172078273 = 0;
+_MenuBlock_98070487_AMO_11020172 = 0;
+_MenuBlock_98070487_AMO_83097424 = 0;
+_MenuBlock_98070487_AMO_8595930 = 0;
+_MenuBlock_98070487_AMO_126820076 = 0;
+_MenuBlock_98070487_AMO_91568022 = 0;
+_MenuBlock_98070487_AMO_13225397 = 0;
+_MenuBlock_98070487_AMO_114896351 = 0;
+_MenuBlock_98070487_AMO_96852826 = 0;
+_MenuBlock_98070487_AMO_135006846 = 0;
+_MenuBlock_98070487_AMO_259145164 = 0;
+_MenuBlock_98070487_AMO_258608421 = 0;
+_MenuBlock_98070487_AMO_260763075 = 0;
+_MenuBlock_98070487_AMO_231405590 = 0;
+_MenuBlock_98070487_ASO_1 =  "";
+_MenuBlock_98070487_ASO_2 =  "";
+_MenuBlock_98070487_MNO = "";
+_MenuBlock_98070487_VNO = "";
+}
+if(( (_gtv27) && (_gtv8) )) { if ( ! _MenuBlock_98070487_OMUIS) {_MenuBlock_98070487_OMUIS = 1;if (_tempVariable_bool){  _menuUpEvents(0);
+}}} else {_MenuBlock_98070487_OMUIS = 0;}
+if(( (_gtv8) && (_gtv23) )) { if ( ! _MenuBlock_98070487_OMDIS) {_MenuBlock_98070487_OMDIS = 1;if (_tempVariable_bool){   _menuDownEvents(0);
+}}} else {_MenuBlock_98070487_OMDIS = 0;}
+if(( (_gtv11) && (_gtv8) )) { if ( ! _MenuBlock_98070487_OEMIS) {_MenuBlock_98070487_OEMIS = 1; if (_tempVariable_bool){ _menuEnterTheMenuEvents (0);
+}}} else {_MenuBlock_98070487_OEMIS = 0;}
+if(( (_gtv37) && (_gtv8) )) { if ( ! _MenuBlock_98070487_OExFMIS) {_MenuBlock_98070487_OExFMIS = 1; if (_tempVariable_bool){ _menuExitFromMenuEvents (0);
+}}} else {_MenuBlock_98070487_OExFMIS = 0;}
+if(( (_gtv31) && (_gtv8) )) { if ( ! _MenuBlock_98070487_OVUIS) {_MenuBlock_98070487_OVUIS = 1; if (_tempVariable_bool){  _valueUpEvents(0); 
+_menuUpdateToEEpromItems();
+} }} else {_MenuBlock_98070487_OVUIS = 0; }
+if(( (_gtv8) && (_gtv35) )) { if ( ! _MenuBlock_98070487_OVDIS) {_MenuBlock_98070487_OVDIS = 1; if (_tempVariable_bool){  _valueDownEvents(0); 
+_menuUpdateToEEpromItems();
+}} } else {_MenuBlock_98070487_OVDIS = 0; }
+if(_gtv33) { if ( ! _MenuBlock_98070487_IDI_0) {_MenuBlock_98070487_IDI_0 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '0');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_0 = 0;}
+if(_gtv20) { if ( ! _MenuBlock_98070487_IDI_1) {_MenuBlock_98070487_IDI_1 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '1');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_1 = 0;}
+if(_gtv21) { if ( ! _MenuBlock_98070487_IDI_2) {_MenuBlock_98070487_IDI_2 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '2');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_2 = 0;}
+if(_gtv22) { if ( ! _MenuBlock_98070487_IDI_3) {_MenuBlock_98070487_IDI_3 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '3');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_3 = 0;}
+if(_gtv24) { if ( ! _MenuBlock_98070487_IDI_4) {_MenuBlock_98070487_IDI_4 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '4');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_4 = 0;}
+if(_gtv25) { if ( ! _MenuBlock_98070487_IDI_5) {_MenuBlock_98070487_IDI_5 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '5');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_5 = 0;}
+if(_gtv26) { if ( ! _MenuBlock_98070487_IDI_6) {_MenuBlock_98070487_IDI_6 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '6');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_6 = 0;}
+if(_gtv28) { if ( ! _MenuBlock_98070487_IDI_7) {_MenuBlock_98070487_IDI_7 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '7');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_7 = 0;}
+if(_gtv29) { if ( ! _MenuBlock_98070487_IDI_8) {_MenuBlock_98070487_IDI_8 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '8');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_8 = 0;}
+if(_gtv30) { if ( ! _MenuBlock_98070487_IDI_9) {_MenuBlock_98070487_IDI_9 = 1; if (_tempVariable_bool){ _menuDirectInputKeyPressEvents(0, '9');
+_menuUpdateToEEpromItems();
+}}} else {_MenuBlock_98070487_IDI_9 = 0;}
+_gtv17 = ( (_MenuBlock_98070487_AMO_110573979) || (_MenuBlock_98070487_AMO_174410340) || (_MenuBlock_98070487_AMO_152766230) || (_MenuBlock_98070487_AMO_1374227) || (_MenuBlock_98070487_AMO_78395074) || (_MenuBlock_98070487_AMO_140792278) || (_MenuBlock_98070487_AMO_243644557) || (_MenuBlock_98070487_AMO_94042602) || (_MenuBlock_98070487_AMO_188655611) || (_MenuBlock_98070487_AMO_214942154) || (_MenuBlock_98070487_AMO_54351946) || (_MenuBlock_98070487_AMO_82053453) || (_MenuBlock_98070487_AMO_174116671) || (_MenuBlock_98070487_AMO_149198026) || (_MenuBlock_98070487_AMO_231464087) || (_MenuBlock_98070487_AMO_14990655) || (_MenuBlock_98070487_AMO_2142001) || (_MenuBlock_98070487_AMO_140906228) || (_MenuBlock_98070487_AMO_74286321) || (_MenuBlock_98070487_AMO_172078273) || (_MenuBlock_98070487_AMO_11020172) || (_MenuBlock_98070487_AMO_83097424) || (_MenuBlock_98070487_AMO_8595930) || (_MenuBlock_98070487_AMO_126820076) || (_MenuBlock_98070487_AMO_91568022) || (_MenuBlock_98070487_AMO_13225397) || (_MenuBlock_98070487_AMO_114896351) || (_MenuBlock_98070487_AMO_96852826) || (_MenuBlock_98070487_AMO_135006846) || (_MenuBlock_98070487_AMO_259145164) || (_MenuBlock_98070487_AMO_258608421) || (_MenuBlock_98070487_AMO_260763075) || (_MenuBlock_98070487_AMO_231405590) );
+if(( (_MenuBlock_98070487_AMO_259145164) || (_MenuBlock_98070487_AMO_258608421) || (_MenuBlock_98070487_AMO_260763075) || (_MenuBlock_98070487_AMO_231405590) ))
+{_swi7=((String("        ")) + ((String((_menuValueArray_int[9]), DEC))) + ((String((_menuValueArray_int[13]), DEC))) + ((String((_menuValueArray_int[15]), DEC))) + ((String((_menuValueArray_int[7]), DEC))));}
+else
+{_swi7=_MenuBlock_98070487_ASO_2;}
+En_83392563_55 = _trgs3;
+Text1_83392563_55 = _swi7;
+Stroka_83392563_55 = 3;
+Stolb_83392563_55 = 0;
+
+        if (En_83392563_55 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_55, Stroka_83392563_55);
+        lcd.print((Text1_83392563_55));
+        }
+
+
+
+En_83392563_54 = _trgs3;
+Text1_83392563_54 = _MenuBlock_98070487_ASO_1;
+Stroka_83392563_54 = 2;
+Stolb_83392563_54 = 0;
+
+        if (En_83392563_54 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_54, Stroka_83392563_54);
+        lcd.print((Text1_83392563_54));
+        }
+
+
+
+En_83392563_53 = _trgs3;
+Text1_83392563_53 = _MenuBlock_98070487_VNO;
+Stroka_83392563_53 = 1;
+Stolb_83392563_53 = 0;
+
+        if (En_83392563_53 > 0) 
+        {
+        lcd.setCursor(Stolb_83392563_53, Stroka_83392563_53);
+        lcd.print((Text1_83392563_53));
+        }
+
+
+
+if (_gtv44) { if (_trgrt18I) { _trgrt18 = 0;} else {_trgrt18 = 1; _trgrt18I = 1;} } else {_trgrt18 = 0; _trgrt18I = 0;}; 
+ En_233382538_1 = _trgs3;
+Text1_233382538_1 = _MenuBlock_98070487_MNO;
+Stroka_233382538_1 = 0;
+Stolb_233382538_1 = 0;
+cle_ar_233382538_1 = _trgrt18;
+
+        if (En_233382538_1) 
+
+        {
+         {
+         if (cle_ar_233382538_1)
+         lcd.clear();
+         }
+        lcd.setCursor(Stolb_233382538_1, Stroka_233382538_1);
+        lcd.print((Text1_233382538_1));
+        }
+
+
+
+
+//Плата:14
+//Наименование:Индикатор ОК
+if (1) {if (! _gen2I) { _gen2I = 1; _gen2O = 1; _gen2P =  millis(); } } else { _gen2I = 0 ;  _gen2O= 0;  } if (_gen2I ) { if (_gen2O) { if (  flprog::isTimer( _gen2P , 200 )) { _gen2P = millis(); _gen2O = 0; } } else  { if (  flprog::isTimer( _gen2P , 2000 )) {  _gen2P = millis(); _gen2O = 1;  } } }
+digitalWrite(40, _gen2O);
+
+//Плата:15
+//Наименование:Логика тестирования
+bool   _bounceTmpD12 = ( (!(_bounseInputD26O)) && (_gtv45) );
+
+if (_bounse12S) 
+    {
+     if (millis() >= (_bounse12P + 40)) 
+         {_bounse12O=  _bounceTmpD12; _bounse12S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD12 != _bounse12O )
+         {_bounse12S=1; _bounse12P = millis();} 
+      } 
+if (_bounse12O) { if (_trgrt27I) { _trgrt27 = 0;} else {_trgrt27 = 1; _trgrt27I = 1;} } else {_trgrt27 = 0; _trgrt27I = 0;}; 
+ if (( (( (_gtv45) || (_gtv39) )) && (!(!(_bounseInputD26O))) )) { if (_trgrt43I) { _trgrt43 = 0;} else {_trgrt43 = 1; _trgrt43I = 1;} } else {_trgrt43 = 0; _trgrt43I = 0;}; 
+ bool   _bounceTmpD9 = ( (_gtv39) && (!(_bounseInputD26O)) );
+
+if (_bounse9S) 
+    {
+     if (millis() >= (_bounse9P + 40)) 
+         {_bounse9O=  _bounceTmpD9; _bounse9S=0;}
+     }
+else
+    {
+     if ( _bounceTmpD9 != _bounse9O )
+         {_bounse9S=1; _bounse9P = millis();} 
+      } 
+if (_bounse9O) { if (_trgrt9I) { _trgrt9 = 0;} else {_trgrt9 = 1; _trgrt9I = 1;} } else {_trgrt9 = 0; _trgrt9I = 0;}; 
+ if(_trgrt43) _trgs6 = 1;
+if(( (_gtv43) || (_trgrt9) || (_trgrt27) )) _trgs6 = 0;
+digitalWrite(62, _trgs6);
+if(( (_gtv39) && (!(_bounseInputD26O)) ))
+{_swi28=1;}
+else
+{_swi28=0;}
+if(( (_gtv43) || (_trgrt9) )){ if(!_SEEPR1OSN){(updateBooleanToEEPROM(2, 4, 0x0, (_swi28)));
+_SEEPR1OSN=1;} }else{ if(_SEEPR1OSN){_SEEPR1OSN=0;}}
+_gtv18 = ( (_gtv39) && (!(_bounseInputD26O)) );
+if(( (!(_bounseInputD26O)) && (_gtv45) ))
+{_swi31=1;}
+else
+{_swi31=0;}
+if(( (_gtv46) || (_trgrt27) )){ if(!_SEEPR2OSN){(updateBooleanToEEPROM(2, 5, 0x0, (_swi31)));
+_SEEPR2OSN=1;} }else{ if(_SEEPR2OSN){_SEEPR2OSN=0;}}
+_gtv42 = ( (!(_bounseInputD26O)) && (_gtv45) );
+
+//Плата:16
+//Наименование:Контроль температуры и управление вентилятором
+if ((_gtv2) < ((_gtv2)-((_menuValueArray_int[12])))) { if (_trgrt41I) { _trgrt41 = 0;} else {_trgrt41 = 1; _trgrt41I = 1;} } else {_trgrt41 = 0; _trgrt41I = 0;}; 
+ if ((_gtv2) >= ((_menuValueArray_int[10]))) { if (_trgrt32I) { _trgrt32 = 0;} else {_trgrt32 = 1; _trgrt32I = 1;} } else {_trgrt32 = 0; _trgrt32I = 0;}; 
+ if(_trgrt32) _trgs5 = 1;
+if(_trgrt41) _trgs5 = 0;
+_gtv47 = _trgs5;
+if ((_gtv2) < ((_gtv2)-((_menuValueArray_int[12])))) { if (_trgrt31I) { _trgrt31 = 0;} else {_trgrt31 = 1; _trgrt31I = 1;} } else {_trgrt31 = 0; _trgrt31I = 0;}; 
+ if ((_gtv2) >= ((_menuValueArray_int[6]))) { if (_trgrt30I) { _trgrt30 = 0;} else {_trgrt30 = 1; _trgrt30I = 1;} } else {_trgrt30 = 0; _trgrt30I = 0;}; 
+ if(_trgrt30) _trgs2 = 1;
+if(_trgrt31) _trgs2 = 0;
+if (!(_bounseInputD22O)) {if (! _gen10I) { _gen10I = 1; _gen10O = 1; _gen10P =  millis(); } } else { _gen10I = 0 ;  _gen10O= 0;  } if (_gen10I ) { if (_gen10O) { if (  flprog::isTimer( _gen10P , 300000 )) { _gen10P = millis(); _gen10O = 0; } } else  { if (  flprog::isTimer( _gen10P , 86100000 )) {  _gen10P = millis(); _gen10O = 1;  } } }
+if (_gen4O) { if (_trgrt42I) { _trgrt42 = 0;} else {_trgrt42 = 1; _trgrt42I = 1;} } else {_trgrt42 = 0; _trgrt42I = 0;}; 
+ if(_trgrt42) {_tim2O = 1; _tim2I = 1;} else { if(_tim2I) {_tim2I = 0; _tim2P = millis();} else { if (_tim2O) {if ( flprog::isTimer(_tim2P, 300000)) _tim2O = 0;}}}
+digitalWrite(63, ( (_gen10O) || (_tim2O) || (_trgs2) ));
+
+
+
+
+
+
+
+}
+
+String _readStringFromProgmem (char *string)
+{
+String result = String("");
+while (pgm_read_byte(string)!='\0')
+{
+result=result+ char(pgm_read_byte(string));
+	string++;
+	}
+return result;
+}
+ void _menuUpEvents (int menuIndex)
+{
+(_MainMenus[menuIndex]).tempString = "";
+int tempIndex = pgm_read_byte(&_menuParametrsArray[((_MainMenus[menuIndex]).currentItem).startInArrayIndex]);
+int parIndex = pgm_read_byte(&_menuParametrsArray[ (((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+5]);
+int parentStartIndex;
+int parentStopIndex;
+if (parIndex == 0) {parentStartIndex = (_MainMenus[menuIndex]).startIndex; parentStopIndex = (_MainMenus[menuIndex]).stopIndex;}
+else { parentStartIndex = pgm_read_byte(&_menuParametrsArray[( (_MenuItems[parIndex - 1]).startInArrayIndex)+3]);
+ parentStopIndex = pgm_read_byte(&_menuParametrsArray[( (_MenuItems[parIndex-1]).startInArrayIndex)+4]); }
+if (tempIndex == parentStartIndex) {if((_MainMenus[menuIndex]).isSwitchMenuAroundRing) {(_MainMenus[menuIndex]).currentItem = _MenuItems[parentStopIndex -1]; return;} else{return;}}
+(_MainMenus[menuIndex]).currentItem = _MenuItems[tempIndex - 2];
+return;
+}
+ void _menuDownEvents (int menuIndex)
+{
+(_MainMenus[menuIndex]).tempString = "";
+int tempIndex = pgm_read_byte(&_menuParametrsArray[((_MainMenus[menuIndex]).currentItem).startInArrayIndex]);
+int parIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+5]);
+int parentStartIndex;
+int parentStopIndex;
+if (parIndex == 0) {parentStartIndex = (_MainMenus[menuIndex]).startIndex; parentStopIndex = (_MainMenus[menuIndex]).stopIndex;}
+else { parentStartIndex = pgm_read_byte(&_menuParametrsArray[( (_MenuItems[parIndex-1]).startInArrayIndex)+3]);
+ parentStopIndex = pgm_read_byte(&_menuParametrsArray[((_MenuItems[parIndex-1]).startInArrayIndex)+4]); }
+if (tempIndex == parentStopIndex) {if((_MainMenus[menuIndex]).isSwitchMenuAroundRing) {(_MainMenus[menuIndex]).currentItem = _MenuItems[parentStartIndex -1]; return;} else{return;}}
+(_MainMenus[menuIndex]).currentItem = _MenuItems[tempIndex];
+return;
+}
+ void _valueUpEvents (int menuIndex)
+{
+int valIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+2]);
+int itemType = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+1]);
+int indexMax = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+6]);
+int indexStep = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+8]);
+if(itemType ==3) {_menuValueArray_bool[valIndex - 1 ] = 1; return;}
+if (itemType == 4) {if (! indexMax == 0) { if ( ! (int(pgm_read_word(&_menuConstantValuesArray_int[indexMax -1])) > int(_menuValueArray_int[valIndex -1]))) {return;} }
+_menuValueArray_int[valIndex -1] = _menuValueArray_int[valIndex -1] + (pgm_read_word(&_menuConstantValuesArray_int[indexStep -1])); }
+}
+ void _valueDownEvents (int menuIndex)
+{
+
+int valIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+2]);
+int itemType = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+1]);
+int indexMin = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+7]);
+int indexStep = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+8]);
+if(itemType ==3) {_menuValueArray_bool[valIndex -1] = 0; return;}
+if (itemType == 4) { if (! indexMin == 0) { if ( ! ((int(pgm_read_word(&_menuConstantValuesArray_int[indexMin - 1]))) < int(_menuValueArray_int[valIndex - 1]))) {return;}} 
+_menuValueArray_int[valIndex - 1] = _menuValueArray_int[valIndex - 1] - (pgm_read_word(&_menuConstantValuesArray_int[indexStep - 1])); }
+}
+ void _menuEnterTheMenuEvents (int menuIndex)
+{
+int itemType =  pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+1]);
+if(!(itemType == 0)) {return;}
+int tempIndex = pgm_read_byte(&_menuParametrsArray[((_MainMenus[menuIndex]).currentItem).startInArrayIndex]);
+int newIndex = pgm_read_byte(&_menuParametrsArray[((_MenuItems[tempIndex - 1]).startInArrayIndex)+3]);
+if(newIndex == 0){return;}
+(_MainMenus[menuIndex]).tempString = "";
+(_MainMenus[menuIndex]).currentItem = _MenuItems[newIndex - 1]; 
+return;
+}
+ void _menuExitFromMenuEvents (int menuIndex)
+{
+int parIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+5]);
+if(parIndex == 0) {return;}
+(_MainMenus[menuIndex]).tempString = "";
+(_MainMenus[menuIndex]).currentItem = _MenuItems[parIndex - 1]; 
+return;
+}
+ String _menuOutputValueString (int menuIndex)
+{
+int itemType = pgm_read_byte(&_menuParametrsArray[ (((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+1]);
+int valueStrIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+11]);
+if(itemType == 0) {if( valueStrIndex == 0) {return "";}}
+int valIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+2]);
+int indexMin = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+7]);
+int indexMax = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+6]);
+if( valIndex == 0){ return "";}
+int convFormat = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+9]);
+if(itemType == 3) { return _convertBoolean(itemType, convFormat, valIndex, indexMax, indexMin);}
+if(itemType == 4) { return _convertNamber(itemType, convFormat, valIndex, indexMax, indexMin);}
+return "";
+}
+ void _menuDirectInputKeyPressEvents(int menuIndex, char inputSymbol)
+{
+int valIndex = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+2]);
+int temp;
+if(valIndex == 0) {return;}
+int itemType = pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+1]);
+if(itemType == 7) {return;} 
+ if(itemType == 3){(_MainMenus[menuIndex]).tempString = "";}
+(_MainMenus[menuIndex]).tempString = (_MainMenus[menuIndex]).tempString + inputSymbol;
+if(itemType == 3) { _menuValueArray_bool[valIndex - 1]  =  ((((_MainMenus[menuIndex]).tempString )).toInt());}
+if(itemType == 4) { _menuValueArray_int[valIndex - 1]  =  (((_MainMenus[menuIndex]).tempString )).toInt(); temp =  pgm_read_byte(&_menuParametrsArray[(((_MainMenus[menuIndex]).currentItem).startInArrayIndex)+6]);
+ if (temp  != 0) {if ((_menuValueArray_int[valIndex - 1])  > (pgm_read_word(&_menuConstantValuesArray_int[temp - 1]))) {_menuValueArray_int[valIndex - 1]   =  (pgm_read_word(&_menuConstantValuesArray_int[temp - 1])); (_MainMenus[menuIndex]).tempString = ""; } } 
+}
+}
+ void _menuUpdateToEEpromItems()
+{
+(updateIntegerToEEPROM(3, 0, 0x0, ((_menuValueArray_int[0]))));
+(updateBooleanToEEPROM(1, 0, 0x0, ((_menuValueArray_bool[0]))));
+(updateIntegerToEEPROM(5, 0, 0x0, ((_menuValueArray_int[1]))));
+(updateIntegerToEEPROM(7, 0, 0x0, ((_menuValueArray_int[2]))));
+(updateIntegerToEEPROM(9, 0, 0x0, ((_menuValueArray_int[3]))));
+(updateIntegerToEEPROM(11, 0, 0x0, ((_menuValueArray_int[4]))));
+(updateIntegerToEEPROM(13, 0, 0x0, ((_menuValueArray_int[5]))));
+(updateBooleanToEEPROM(1, 1, 0x0, ((_menuValueArray_bool[1]))));
+(updateIntegerToEEPROM(15, 0, 0x0, ((_menuValueArray_int[6]))));
+(updateBooleanToEEPROM(1, 2, 0x0, ((_menuValueArray_bool[2]))));
+(updateIntegerToEEPROM(17, 0, 0x0, ((_menuValueArray_int[7]))));
+(updateIntegerToEEPROM(19, 0, 0x0, ((_menuValueArray_int[8]))));
+(updateIntegerToEEPROM(21, 0, 0x0, ((_menuValueArray_int[9]))));
+(updateIntegerToEEPROM(23, 0, 0x0, ((_menuValueArray_int[10]))));
+(updateBooleanToEEPROM(1, 3, 0x0, ((_menuValueArray_bool[3]))));
+(updateIntegerToEEPROM(25, 0, 0x0, ((_menuValueArray_int[11]))));
+(updateBooleanToEEPROM(1, 4, 0x0, ((_menuValueArray_bool[4]))));
+(updateBooleanToEEPROM(1, 5, 0x0, ((_menuValueArray_bool[5]))));
+(updateIntegerToEEPROM(27, 0, 0x0, ((_menuValueArray_int[12]))));
+(updateBooleanToEEPROM(1, 6, 0x0, ((_menuValueArray_bool[6]))));
+(updateIntegerToEEPROM(29, 0, 0x0, ((_menuValueArray_int[13]))));
+(updateIntegerToEEPROM(31, 0, 0x0, ((_menuValueArray_int[14]))));
+(updateBooleanToEEPROM(1, 7, 0x0, ((_menuValueArray_bool[7]))));
+(updateBooleanToEEPROM(2, 0, 0x0, ((_menuValueArray_bool[8]))));
+(updateIntegerToEEPROM(33, 0, 0x0, ((_menuValueArray_int[15]))));
+(updateBooleanToEEPROM(2, 1, 0x0, ((_menuValueArray_bool[9]))));
+(updateBooleanToEEPROM(2, 2, 0x0, ((_menuValueArray_bool[10]))));
+(updateBooleanToEEPROM(2, 3, 0x0, ((_menuValueArray_bool[11]))));
+(updateIntegerToEEPROM(35, 0, 0x0, ((_menuValueArray_int[16]))));
+(updateIntegerToEEPROM(37, 0, 0x0, ((_menuValueArray_int[17]))));
+(updateIntegerToEEPROM(39, 0, 0x0, ((_menuValueArray_int[18]))));
+(updateIntegerToEEPROM(41, 0, 0x0, ((_menuValueArray_int[19]))));
+(updateIntegerToEEPROM(43, 0, 0x0, ((_menuValueArray_int[20]))));
+}
+String _convertNamber(int itemType, int convFormat, int valIndex, int indexMax, int indexMin)
+{
+if (itemType== 4) {
+if (convFormat == 4) { return String((_menuValueArray_int[valIndex - 1 ]),DEC);}
+if (convFormat == 5) { return String((_menuValueArray_int[valIndex - 1]),HEX);}
+if (convFormat == 6) { return String((_menuValueArray_int[valIndex -1]),BIN);}
+}
+return "";
+}
+String _convertBoolean(int itemType, int convFormat, int valIndex, int indexMax, int indexMin)
+{
+if (convFormat == 1) { if(_menuValueArray_bool[valIndex -1]) {return "1";} else{ return "0";}}
+if (convFormat == 2) { if(_menuValueArray_bool[valIndex -1]) {return "True";} else{ return "False";}}
+if (convFormat == 3) { if(_menuValueArray_bool[valIndex -1 ]) {return "Да";} else{ return "Нет";}}
+if(_menuValueArray_bool[valIndex -1]) {return _readStringFromProgmem ((char*)pgm_read_word(&(_flprogMenuStringsArray[indexMax - 1])));} else { return _readStringFromProgmem ((char*)pgm_read_word(&(_flprogMenuStringsArray[indexMin - 1])));}
+return "";
+}
+float _convertDS18x2xData(byte type_s, byte data[12])
+{
+  int16_t raw = (data[1] << 8) | data[0];
+  if (type_s) 
+  {
+  raw = raw << 3; 
+  if (data[7] == 0x10) { raw = (raw & 0xFFF0) + 12 - data[6]; }
+  }
+else 
+  {
+   byte cfg = (data[4] & 0x60);
+   if (cfg == 0x00) raw = raw & ~7;   else if (cfg == 0x20) raw = raw & ~3;  else if (cfg == 0x40) raw = raw & ~1;
+  }
+return  (float)raw / 16.0;
+}
+float _readDS18_ow38(byte addr[8], byte type_s)
+{  byte data[12];
+byte i;
+_ow38.reset();
+_ow38.select(addr);
+_ow38.write(0xBE);
+for ( i = 0; i < 9; i++) {
+ data[i] = _ow38.read();}_ow38.reset();
+_ow38.select(addr);
+_ow38.write(0x44);
+if (_ow38.crc8(data, 8) != data[8])
+ {return 501;}
+return _convertDS18x2xData(type_s, data);}
+bool _oneWireSeach (byte array[], OneWire ow )
+{
+  byte temp[8];
+  byte i;
+  if ( !ow.search(temp)) {
+    return false;
+  }
+  if (OneWire::crc8(temp, 7) != temp[7]) {
+    return false;
+  }
+
+  switch (temp[0]) {
+    case 0x10:
+      array[8] = 1;
+      break;
+    case 0x28:
+      array[8] = 0;
+      break;
+    case 0x22:
+      array[8] = 0;
+      break;
+    default:
+      return false;
+  }
+
+  for ( i = 0; i < 8; i++) {
+    array[i] = temp[i];
+  }
+ return true;
+} byte readByteFromEEPROM(int addres, byte bitAddres, byte chipAddres)
+{
+return EEPROM.read(addres);
+}
+void updateByteToEEPROM(int addres, byte bitAddres, byte chipAddres, byte value)
+{
+return EEPROM.update(addres, value);
+}
+ bool readBooleanFromEEPROM(int addres, byte bitAddres, byte chipAddres)
+{
+byte temp = readByteFromEEPROM( addres,  bitAddres,  chipAddres);
+return  bitRead(temp, bitAddres);
+}
+ void updateBooleanToEEPROM(int addres, byte bitAddres, byte chipAddres, bool value)
+{
+byte temp = readByteFromEEPROM( addres,  bitAddres,  chipAddres);
+bitWrite(temp, bitAddres, value);
+updateByteToEEPROM( addres,  bitAddres,  chipAddres, temp);
+}
+ int readIntegerFromEEPROM(int addres, byte bitAddres, byte chipAddres)
+{
+byte hight = readByteFromEEPROM( addres,  bitAddres,  chipAddres);
+byte low = readByteFromEEPROM( (addres+1),  bitAddres,  chipAddres);
+return  word(hight, low);
+}
+ void updateIntegerToEEPROM(int addres, byte bitAddres, byte chipAddres, int value)
+{
+updateByteToEEPROM( addres,  bitAddres,  chipAddres, highByte(value));
+updateByteToEEPROM( (addres+1),  bitAddres,  chipAddres, lowByte(value));
+}
+byte decToBcd(byte val)
+ {
+   return ( (val/10*16) + (val%10) );
+ }
+void set3231Date(int addres, struct _I2CRealRimeClockTime *timeStruct, int sec, int  minut, int hou, int dat, int mo, int ye, int daW)
+{
+  byte temp;
+
+  Wire.beginTransmission(addres);
+  Wire.write(0x00);
+  if (sec < 0) {
+    temp = timeStruct -> seconds;
+  } else {
+    temp = sec;
+  }
+  Wire.write(decToBcd(temp));
+  if (minut < 0) {
+    temp = timeStruct -> minutes;
+  } else {
+    temp = minut;
+  }
+  Wire.write(decToBcd(temp));
+  if (hou < 0) {
+    temp = timeStruct -> Hours;
+  } else {
+    temp = hou;
+  }
+  Wire.write(decToBcd(temp));
+  if (daW < 0) {
+    temp = timeStruct -> weekday;
+  } else {
+    temp = daW;
+  }
+  Wire.write(decToBcd(temp));
+  if (dat < 0) {
+    temp = timeStruct -> day;
+  } else {
+    temp = dat;
+  }
+  Wire.write(decToBcd(temp));
+  if (mo < 0) {
+    temp = timeStruct -> month;
+  } else {
+    temp = mo;
+  }
+  Wire.write(decToBcd(temp));
+  if (ye < 0) {
+    temp = timeStruct -> year;
+  } else {
+    temp = ye;
+  }
+  Wire.write(decToBcd(temp));
+  Wire.endTransmission();
+  timeStruct ->startTime = millis() - 1000;
+}
+void get3231Date(int addres, struct _I2CRealRimeClockTime *timeStruct)
+{
+  if (!(flprog::isTimer ((timeStruct ->startTime), 250))) {
+    return;
+  }
+  Wire.beginTransmission( addres);
+  Wire.write(0x00);
+  Wire.endTransmission();
+  Wire.requestFrom(addres, 7);
+  if (Wire.available()) {
+    byte  seconds = Wire.read();
+    byte minutes = Wire.read();
+    byte hours   = Wire.read();
+    byte day     = Wire.read();
+    byte date    = Wire.read();
+    byte month   = Wire.read();
+    byte year    = Wire.read();
+    timeStruct -> seconds = (((seconds & B11110000) >> 4) * 10 + (seconds & B00001111));
+    timeStruct -> minutes = (((minutes & B11110000) >> 4) * 10 + (minutes & B00001111));
+    timeStruct -> Hours = (((hours & B00110000) >> 4) * 10 + (hours & B00001111));
+    timeStruct -> weekday = (day & B00000111);
+    timeStruct -> day    = (((date & B00110000) >> 4) * 10 + (date & B00001111));
+    timeStruct -> month   = (((month & B00010000) >> 4) * 10 + (month & B00001111));
+    timeStruct -> year    = (((year & B11110000) >> 4) * 10 + (year & B00001111));
+  } timeStruct ->startTime = millis();
+}
+String _convertRealTimeClockNumberToString(byte value)
+{
+  if (value > 9) {
+    return String(value, DEC);
+  }
+  return (String("0") + String(value, DEC));
+}
+String _convertNumbeToTime(long value)
+{
+  if (value > 9) {
+    return String(value, DEC);
+  }
+  return ( String("0") + String(value, DEC));
+}
+
+
+void _func_UB_142589483(struct UB_142589483 *_ubInstans, bool ubi_130480819, bool ubi_49975783)
+{
+bool ubo_166541688 = _ubInstans->ubo_166541688;
+bool ubo_723833 = _ubInstans->ubo_723833;
+bool _tim1I = _ubInstans->_tim1I;
+bool _tim1O = _ubInstans->_tim1O;
+unsigned long _tim1P = _ubInstans->_tim1P;
+byte _swi1 = _ubInstans->_swi1;
+byte _swi3 = _ubInstans->_swi3;
+bool _tim2I = _ubInstans->_tim2I;
+bool _tim2O = _ubInstans->_tim2O;
+unsigned long _tim2P = _ubInstans->_tim2P;
+bool _swi2 = _ubInstans->_swi2;
+bool _trgrt1 = _ubInstans->_trgrt1;
+bool _trgrt1I = _ubInstans->_trgrt1I;
+bool _tim3I = _ubInstans->_tim3I;
+bool _tim3O = _ubInstans->_tim3O;
+unsigned long _tim3P = _ubInstans->_tim3P;
+bool _tim4I = _ubInstans->_tim4I;
+bool _tim4O = _ubInstans->_tim4O;
+unsigned long _tim4P = _ubInstans->_tim4P;
+bool _trgrt2 = _ubInstans->_trgrt2;
+bool _trgrt2I = _ubInstans->_trgrt2I;
+if(ubi_49975783) {_tim3O = 1; _tim3I = 1;} else { if(_tim3I) {_tim3I = 0; _tim3P = millis();} else { if (_tim3O) {if ( flprog::isTimer(_tim3P, 100)) _tim3O = 0;}}}
+if(ubi_130480819)
+{_swi3=0;}
+else
+{_swi3=1;}
+if(ubi_130480819) {_tim1O = 1; _tim1I = 1;} else { if(_tim1I) {_tim1I = 0; _tim1P = millis();} else { if (_tim1O) {if ( flprog::isTimer(_tim1P, 30)) _tim1O = 0;}}}
+if(_tim1O)
+{_swi1=1;}
+else
+{_swi1=0;}
+if (ubi_130480819)
+{ if (_tim2I) { if (flprog::isTimer(_tim2P, 500)) {_tim2O = 1;}} else {_tim2I =1; _tim2P = millis();}} else {_tim2O = 0; _tim2I = 0;}
+if(_tim2O) {_tim4O = 1; _tim4I = 1;} else { if(_tim4I) {_tim4I = 0; _tim4P = millis();} else { if (_tim4O) {if ( flprog::isTimer(_tim4P, 50)) _tim4O = 0;}}}
+if(( (_tim3O) || (_tim4O) ))
+{_swi2=0;}
+else
+{_swi2=((_swi1)+(_swi3)) == (2);}
+if (_swi2) { if (_trgrt2I) { _trgrt2 = 0;} else {_trgrt2 = 1; _trgrt2I = 1;} } else {_trgrt2 = 0; _trgrt2I = 0;}; 
+ ubo_166541688 = _trgrt2;
+if (_tim2O) { if (_trgrt1I) { _trgrt1 = 0;} else {_trgrt1 = 1; _trgrt1I = 1;} } else {_trgrt1 = 0; _trgrt1I = 0;}; 
+ ubo_723833 = _trgrt1;
+_ubInstans->ubo_166541688 = ubo_166541688;
+_ubInstans->ubo_723833 = ubo_723833;
+_ubInstans->_tim1I = _tim1I;
+_ubInstans->_tim1O = _tim1O;
+_ubInstans->_tim1P = _tim1P;
+_ubInstans->_swi1 = _swi1;
+_ubInstans->_swi3 = _swi3;
+_ubInstans->_tim2I = _tim2I;
+_ubInstans->_tim2O = _tim2O;
+_ubInstans->_tim2P = _tim2P;
+_ubInstans->_swi2 = _swi2;
+_ubInstans->_trgrt1 = _trgrt1;
+_ubInstans->_trgrt1I = _trgrt1I;
+_ubInstans->_tim3I = _tim3I;
+_ubInstans->_tim3O = _tim3O;
+_ubInstans->_tim3P = _tim3P;
+_ubInstans->_tim4I = _tim4I;
+_ubInstans->_tim4O = _tim4O;
+_ubInstans->_tim4P = _tim4P;
+_ubInstans->_trgrt2 = _trgrt2;
+_ubInstans->_trgrt2I = _trgrt2I;
+
+}
